@@ -1,0 +1,160 @@
+    1  wget    https://s3.amazonaws.com/amazon-reviews-pds/tsv/amazon_reviews_us_Books_v1_02.tsv.gz
+    2  ls -ltr
+    3  ssh-keygen -t ed25519 -C bryantpham27@gmail.com
+    4  cd users
+    5  ls
+    6   ls -al ~/.ssh
+    7  code . 
+    8  type C:bryant.sshid_ed25519.pub
+    9  ssh-agent sh -c 'ssh-add; ssh-add -L'
+   10  git clone git@github.com:bryanttpham/CS132.git
+   11  ls
+   12  rm -d cs132
+   13  ls
+   14  rm -d CS132
+   15  rm -r CS142
+   16  rm -r CS132
+   17  ls
+   18  rm -r CS132
+   19  ls
+   20  rm -r CS132
+   21  ls
+   22  ssh -v
+   23  git clone git@github.com:bryanttpham/CS131.git
+   24  ls
+   25  cd cs142
+   26  cs CS131
+   27  cd cs131
+   28  cd CS131
+   29  ls
+   30  open README.md
+   31  cat > README.md
+   32  cat README.md
+   33  git status
+   34  git pull
+   35  git status
+   36  git pull
+   37  git status
+   38  git reset
+   39  git status
+   40  git restore README.md
+   41  git status
+   42  git pull
+   43  cat README.md
+   44  git status
+   45  ls
+   46  touch bryant.txt
+   47  ls
+   48  git status
+   49  git add .
+   50  git commit -m "create text file"
+   51  git config --global user.email bryantpham27@gmail.com
+   52  git config --global user.name Bryant Pham
+   53  git commit -m "create text file"
+   54  git push 
+   55  ls
+   56  cd cs131
+   57  cs CS131
+   58  cd CS131
+   59  ls 
+   60  mkdir Worksheet1
+   61  ls
+   62  git status 
+   63  ls
+   64  git status 
+   65  git pull
+   66  git status
+   67  ls
+   68  mv bryant.txt /Worksheet1
+   69  ;s
+   70  ls
+   71  whoami
+   72  command:passwd
+   73  passwd
+   74  ls 
+   75  gzip -d amazon_reviews_us_Books_v1_02.tsv.gz
+   76  ls
+   77  cat amazon_reviews_us_Books_v1_02.tsv
+   78  column -t -s$'\t' amazon_reviews_us_Books_v1_02.tsv.gz
+   79* col[Bumn -t -s$'\t' amazon_reviews_us_Books_v1_02.tsv
+   80  cat amazon_reviews_us_Books_v1_02.tsv 
+   81  vi amazon_reviews_us_Books_v1_02.tsv
+   82  head --lines=10 amazon_review_us_Books_v1_02.tsv
+   83  head --lines=10 amazon_reviews_us_Books_v1_02.tsv
+   84  head --lines=1 amazon_reviews_us_Books_v1_02.tsv
+   85  head --lines=2 amazon_reviews_us_Books_v1_02.tsv
+   86  head --lines=2 amazon_reviews_us_Books_v1_02.tsv | column -t -s$'\t'
+   87  head --lines=2 amazon_reviews_us_Books_v1_02.tsv | column -t -T -s$'\t'
+   88  head --lines=2 amazon_reviews_us_Books_v1_02.tsv | column -t -T -s $'\t'
+   89  head --lines=2 amazon_reviews_us_Books_v1_02.tsv | column -T -s $'\t'
+   90  head --lines=2 amazon_reviews_us_Books_v1_02.tsv | column -t -s $'\t'
+   91  head --lines=2 amazon_reviews_us_Books_v1_02.tsv | column -t -R -s $'\t'
+   92  head --lines=2 amazon_reviews_us_Books_v1_02.tsv | column -t -s $'\t'
+   93  head --lines=2 amazon_reviews_us_Books_v1_02.tsv | column -t -s $'\t' -R
+   94  column --help
+   95  head --lines=2 amazon_reviews_us_Books_v1_02.tsv | column -t -s $'\t' -T
+   96  head --lines=2 amazon_reviews_us_Books_v1_02.tsv | column -t -s $'\t' --table-truncate
+   97  head --lines=2 amazon_reviews_us_Books_v1_02.tsv | -T column -t -s $'\t' 
+   98  head --lines=2 amazon_reviews_us_Books_v1_02.tsv | column -T -t -s $'\t' 
+   99  head --lines=2 amazon_reviews_us_Books_v1_02.tsv | column -t -s $'\t'
+  100  head --lines=1 amazon_reviews_us_Books_v1_02.tsv | column -t -s $'\t'
+  101  head --lines=2 amazon_reviews_us_Books_v1_02.tsv | column -x -s $'\t'
+  102  $ awk -F, '{print $6, ","$12}' amazon_review_us_Books_v1_02.tsv
+  103  awk -F, '{print $6, ","$12}' amazon_review_us_Books_v1_02.tsv
+  104  awk -F, '{print $6, ","$12}' amazon_reviews_us_Books_v1_02.tsv
+  105  awk -F, '{print $1}' amazon_reviews_us_Books_v1_02.tsv
+  106  cut -f6 
+  107  cut -f6 amazon_reviews_us_Books_v1_02.tsv | tail -n +2
+  108  cut -f6 amazon_reviews_us_Books_v1_02.tsv | head --lines=3
+  109  cut -f6 amazon_reviews_us_Books_v1_02.tsv | tail -n +2 \ head --lines=3
+  110  cut -f6 amazon_reviews_us_Books_v1_02.tsv | tail -n +2 | head --lines=3
+  111  cut --help
+  112  cut -f 6,12 amazon_reviews_us_Books_v1_02.tsv | tail -n +2 | head --lines=3
+  113  cut -f 6,12 amazon_reviews_us_Books_v1_02.tsv | tail -n +2 | head --lines=50
+  114  column --help
+  115  cut -f 6,12 amazon_reviews_us_Books_v1_02.tsv | tail -n +2 | head --lines=50 || column -t -s '\t'
+  116  cut -f 6,12 amazon_reviews_us_Books_v1_02.tsv | tail -n +2 | head --lines=50 || column -t -s $'\t'
+  117  cut -f 6,12 amazon_reviews_us_Books_v1_02.tsv | tail -n +2 | head --lines=50 |  column -t -s $'\t'
+  118  cut -f 6,12 amazon_reviews_us_Books_v1_02.tsv | head --lines=50 |  column -t -s $'\t'
+  119  cut -f 6,12 amazon_reviews_us_Books_v1_02.tsv | head --lines=20 |  column -t -s $'\t'
+  120  awk --help
+  121  awk -F"\t" '$12 =="Y"
+  122  awk -F"\t" '$12 =="Y" amazon_reviews_us_Books_v1_02.tsv
+
+
+
+  123  awk -F"\t" '$12 =="Y"  { print $6 } amazon_reviews_us_Books_v1_02.tsv
+
+awk -F"\t" '$12 =="Y"  { print $6 }' amazon_reviews_us_Books_v1_02.tsv
+
+awk -F"\t" '$12 =="Y"  { print $6 } amazon_reviews_us_Books_v1_02.tsv
+  124  awk -F"\t" '$12 =="Y"  { print $6 }' amazon_reviews_us_Books_v1_02.tsv
+  125  awk -F"\t" '$12 =="Y"  { print $6 }' amazon_reviews_us_Books_v1_02.tsv || head --lines=10
+  126  awk -F"\t" '$12 =="Y"  { print $6 }' amazon_reviews_us_Books_v1_02.tsv | head --lines=10
+  127  awk -F"\t" '$12 =="Y" ' amazon_reviews_us_Books_v1_02.tsv | head --lines=10
+  128  awk -F"\t" '$12 =="N" ' amazon_reviews_us_Books_v1_02.tsv | head --lines=10
+  129  awk -F"\t" '$12 =="N" ' amazon_reviews_us_Books_v1_02.tsv | wc -l 
+  130  awk -F"\t" '$12 =="N" ' amazon_reviews_us_Books_v1_02.tsv | head --lines=10 | wc -;
+  131  awk -F"\t" '$12 =="N" ' amazon_reviews_us_Books_v1_02.tsv | head --lines=10 | wc -l
+  132* 
+  133  awk -F"\t" '$12 =="N" ' amazon_reviews_us_Books_v1_02.tsv | head --lines=10 | wc -w
+  134  awk -F"\t" '$12 =="N" ' amazon_reviews_us_Books_v1_02.tsv| wc -w
+  135  head --lines=10 amazon_reviews_us_Books_v1_02.tsv 
+  136  awk -F"\t" '$12 =="N" ' amazon_reviews_us_Books_v1_02.tsv| wc -w | >>count.txt
+  137  lc --help
+  138  wc --help
+  139  ls
+  140  cat count.txt
+  141  cat > count.txt
+  142  cat count.txt
+  143  awk -F"\t" '$12 =="N" ' amazon_reviews_us_Books_v1_02.tsv| wc -w >>count.txt
+  144  cat count.txt
+  145  awk -F"\t" '$12 =="N" ' amazon_reviews_us_Books_v1_02.tsv| wc -l >>count.txt
+  146  cat count.txt
+  147  awk -F"\t" '$12 =="Y" ' amazon_reviews_us_Books_v1_02.tsv| wc -w >>count.txt
+  148  awk -F"\t" '$12 =="Y" ' amazon_reviews_us_Books_v1_02.tsv| wc -l >>count.txt
+  149  cat count.txt
+  150  vi count.txt
+  151  cat count.txt
+  152  cat history
+  153  history > cmds.log

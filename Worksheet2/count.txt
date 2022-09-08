@@ -1,0 +1,7 @@
+Word Count and Line Count Info
+__________________________________________________________
+
+Word Count for Non-Verified Reviews:505766888
+Line Count for Non-Verified Reviews:2876174
+Word Count for Verified Reviews:44402864
+Line Count for Verified Reviewsp:229346
