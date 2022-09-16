@@ -1,0 +1,21 @@
+
+Question 1: Top 3 Reviewers:
+
+]0;bryant@sjsu:~[bryant@sjsu ~]$ cut -f2 amazon_reviews_us_Books_v1_02.tsv |sort -nr|uniq -c | head -n 5[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kcut -f2 amazon_reviews_us_Books_v1_02.tsv |sort -nr|uniq -c | head -n 5[C[C[C[C[C[C[C[C[C[1P[C[C[C[C[C[C[C[C[C[C[C[C[1@\[C[1P[1@|[1@s[1@o[1@r[1@t[1@ [1@-[1@n[1@r
+1.  21922 50122160
+2.   9964 50732546
+3.   2664 52615377
+   2215 45041039
+   1797 50776149
+]0;bryant@sjsu:~[bryant@sjsu ~]$ ^C
+
+Question 2: Top 3 Products
+]0;bryant@sjsu:~[bryant@sjsu ~]$ cut -f4 amazon_reviews_us_Books_v1_02.tsv |sort -n|uniq -c |sort -nr| head -n 5[C[C[1P[1P[1P[1@ 
+1.   4625 043935806X
+2.   3739 0439139597
+3.   2666 0525947647
+   2615 0895260174
+   2584 0385504209
+]0;bryant@sjsu:~[bryant@sjsu ~]$ exit
+
+Script done on 2022-09-16 01:25:12-04:00
