@@ -1,0 +1,191 @@
+:i
+Script started on 2022-09-29 23:05:19-04:00
+]0;bryant@sjsu:~/CS131/A2[bryant@sjsu A2]$ cd ..
+]0;bryant@sjsu:~/CS131[bryant@sjsu CS131]$ cd ..
+Question 1:
+Top 10 users who replied the most to other users
+]0;bryant@sjsu:~[bryant@sjsu ~]$ cut -f6 downloaded_tweets_extend_original_nolf2_NOBOT.tsv| sort -n | uniq -c |sort -n -r| head -n 10
+  38739 
+     46 3453306553
+     28 29447428
+     14 1238370241169616897
+     13 1108565574
+     12 21525682
+     12 19739126
+     12 1120633726478823425
+     11 1462548977367359490
+     10 95091601
+
+Question 2:
+Top 10 users who got the most replies from other users
+]0;bryant@sjsu:~[bryant@sjsu ~]$ awk -F'\t' '$6!=""' downloaded_tweets_extend_original_nolf2_NOBOT.tsv|cut -f2| sort -n| uniq -c | sort -n -r|head -n 10
+     34 1387010761994682371
+     19 1573800344
+     17 1921951394
+     17 1240682348120866816
+     15 94350709
+     14 940778288871542786
+     11 29447428
+     10 90107770
+     10 1401861298233647106
+      9 531618878
+]0;bryant@sjsu:~[bryant@sjsu ~]$ cat downloaded_tweets_extend_nolf2_NOBOT | grep type=retweeted | cut -f2 | sort -n |uniq -c | sort -n -r | head -n 10
+cat: downloaded_tweets_extend_nolf2_NOBOT: No such file or directory
+
+Question 3:
+Top 10 users who retweeted the most other tweets (downloaded_tweets_extend_nolf.csv)
+]0;bryant@sjsu:~[bryant@sjsu ~]$ cat downloaded_tweets_extend_nolf2_NOBOT | grep type=retweeted | cut -f2 | sort -n |uniq -c | sort -n -r | head -n 10[1@.[1@t[1@s[1@v
+   2065 45379403
+   1678 77726331
+   1641 870244616003403781
+   1582 1028022611324747776
+   1312 711608180535640064
+   1281 139109800
+   1234 177400353
+   1216 832019161454817280
+   1159 29447428
+   1139 1060440219097423872
+
+Question 5:
+ 30 hashtags used most frequently overall for anything
+]0;bryant@sjsu:~[bryant@sjsu ~]$ cat downloaded_tweets_extend_nolf2_NOBOT.tsv  |cut -f4 | tr -d '"'|tr ',' '\n'|sort| uniq -c | sort -n -r| head -n 30
+  20647 
+   2811 Ukraine
+   1598 COVID19
+   1112 Russia
+   1107 LongCovid
+    895 FBPE
+    894 FollowBackFriday
+    782 StandWithUkraine
+    536 PutinHitler
+    460 Russian
+    404 Omicron
+    403 Putin
+    366 BREAKING
+    363 auspol
+    356 Mariupol
+    340 bcpoli
+    337 Kyiv
+    319 ableg
+    305 StopPutinNOW
+    282 PMQs
+    282 COVIDisAirborne
+    280 เจ้าแก้มก้อน
+    274 PutinWarCriminal
+    263 RussiaSanctions
+    263 Genocide
+    262 Ottawa
+    260 BoycottRussia
+    252 VoteFordOut
+    251 Ukrainian
+    239 onpoli
+
+Question 6:
+30 hashtags that got retweeted the most
+]0;bryant@sjsu:~[bryant@sjsu ~]$ cat downloaded_tweets_extend_nolf2_NOBOT.tsv  |grep type=retweeted|cut -f4 | tr -d '"'|tr ',' '\n'|sort| uniq -c | sort -n -r| head -n 30
+  20641 
+   2510 Ukraine
+   1096 COVID19
+   1029 Russia
+    956 LongCovid
+    397 Russian
+    362 BREAKING
+    348 auspol
+    317 Kyiv
+    316 Omicron
+    287 Mariupol
+    274 เจ้าแก้มก้อน
+    240 StandWithUkraine
+    228 Putin
+    222 BA2
+    218 Ukrainian
+    199 fluke_natouch
+    178 PMQs
+    169 COVID
+    146 Covid19
+    138 ableg
+    128 Kharkiv
+    121 โอห์มไง
+    116 Anonymous
+    114 UkraineRussiaWar
+    114 NATO
+    113 UK
+    111 China
+    105 Partygate
+    104 OhmThitiwat
+
+Question 7:
+30 hashtags that got replied the most
+]0;bryant@sjsu:~[bryant@sjsu ~]$ cat downloaded_tweets_extend_nolf2_NOBOT.tsv  |grep type=replied_to|cut -f4 | tr -d '"'|tr ',' '\n'|sort| uniq -c | sort -n -r| head -n 30
+    883 FBPE
+    875 FollowBackFriday
+    429 PutinHitler
+    319 StandWithUkraine
+    252 COVID19
+    216 StopPutinNOW
+    211 RussiaSanctions
+    207 BoycottRussia
+    191 PutinWarCriminal
+    178 bcpoli
+    142 Ottawa
+    127 bced
+    121 COVID19BC
+    115 Genocide
+    107 NeverVoteConservative
+    106 BoycottATP
+    100 onpoli
+     95 LongCovid
+     92 VoteFordOut
+     84 ClimateCrisis
+     82 COVIDisAirborne
+     79 Ukraine
+     74 Putin
+     71 Canada
+     64 Apartheid
+     62 cdnpoli
+     61 N95
+     58 Ontario
+     57 MaskUp
+     49 J6TraitorSaysWhat
+
+]0;bryant@sjsu:~[bryant@sjsu ~]$ cat downloaded_tweets_extend_nolf2_NOBOT.tsv  |grep type=quoted|cut -f4 | tr -d '"'|tr ',' '\n'|sort| uniq -c | sort-n -r| head -n 10
+bash: sort-n: command not found
+
+Question 8:
+30 hashtags that got quoted the most
+]0;bryant@sjsu:~[bryant@sjsu ~]$ cat downloaded_tweets_extend_nolf2_NOBOT.tsv  |grep type=quoted|cut -f4 | tr -d '"'|tr ',' '\n'|sort| uniq -c | sort-n -r| head -n 30[1@ 
+    186 COVID19
+    151 StandWithUkraine
+    140 VoteFordOut
+    113 Genocide
+    111 ableg
+    104 onpoli
+    100 NeverVoteConservative
+     93 bcpoli
+     76 Ukraine
+     76 MaskMandate
+     76 COVIDisAirborne
+     72 Ontario
+     64 Putin
+     64 COVID19AB
+     64 BDS
+     61 MaskUp
+     60 PutinHitler
+     59 COVID19BC
+     59 cdnpoli
+     57 Ottawa
+     56 Canada
+     54 bced
+     53 CovidIsNotOver
+     49 LongCovid
+     49 covid19
+     47 PutinWarCriminal
+     46 VoteThemAllOut2022
+     46 FreePalestine
+     44 StopPutinNOW
+     43 VoteLiberal
+
+
+]0;bryant@sjsu:~[bryant@sjsu ~]$ exit
+
+Script done on 2022-09-29 23:07:20-04:00
