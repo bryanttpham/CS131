@@ -1,0 +1,44 @@
+Script started on 2022-10-12 03:33:57-04:00
+]0;bryant@sjsu:~/CS131/Worksheet5[bryant@sjsu Worksheet5]$ ls
+ws5.txt
+]0;bryant@sjsu:~/CS131/Worksheet5[bryant@sjsu Worksheet5]$ for i in $(cut -f2 amazon_reviews_us_Books_v1_02.tsv |sort -n|uniq -c |sort -nr| cut -c 9-||head -n 5); do echo "$i"; done > test.txt[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C.amazon_reviews_us_Books_v1_02.tsv |sort -n|uniq -c |sort -nr| cut -c 9-[1@|[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C.amazon_reviews_us_Books_v1_02.tsv |sort -n|uniq -c |sort -nr| cut -c 9[1@-[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C/amazon_reviews_us_Books_v1_02.tsv |sort -n|uniq -c |sort -nr| cut -c [1@9[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C.amazon_reviews_us_Books_v1_02.tsv |sort -n|uniq -c |sort -nr| cut -c[1@ [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C.amazon_reviews_us_Books_v1_02.tsv |sort -n|uniq -c |sort -nr| cut -[1@c[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C/amazon_reviews_us_Books_v1_02.tsv |sort -n|uniq -c |sort -nr| cut [1@-[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1@1[1@0[1@-[1@0[1P[1P[1@0[1@0[1@0[1P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P.txt[1P.txt[1P.txt[1P.txt[C[C[C[C^C
+]0;bryant@sjsu:~/CS131/Worksheet5[bryant@sjsu Worksheet5]$ mkdir Cus[K[KUSTOMERS
+]0;bryant@sjsu:~/CS131/Worksheet5[bryant@sjsu Worksheet5]$ touch custid.txt
+]0;bryant@sjsu:~/CS131/Worksheet5[bryant@sjsu Worksheet5]$ touch custid.txt[1Pmkdir CUSTOMERSls[Ktmux new-session -s homework[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[Kmkdir CUSTOMERStouch custid.txt[K[K[bryant@sjsu Worksheet5]$ [K[bryant@sjsu Worksheet5]$ for i in $(cut -f2 ../../amazon_reviews_us_Books_v1_02.tsv |sort -n|uniq -c |sort -nr| cut -c 9-|head -n 1000); do echo "$i"; done >> Customers[K[K[K[K[K[K[K[KUSTOMERS/custid.txt
+]0;bryant@sjsu:~/CS131/Worksheet5[bryant@sjsu Worksheet5]$ cat [K[K[K[Kcd CY[KUSTOMERS
+]0;bryant@sjsu:~/CS131/Worksheet5/CUSTOMERS[bryant@sjsu CUSTOMERS]$ cat custid.txt [K | head -n 10
+50122160
+50732546
+52615377
+45041039
+50776149
+50913245
+20595117
+45273033
+39569598
+49693975
+]0;bryant@sjsu:~/CS131/Worksheet5/CUSTOMERS[bryant@sjsu CUSTOMERS]$ cat custid.txt | head -n 10[K[K20
+50122160
+50732546
+52615377
+45041039
+50776149
+50913245
+20595117
+45273033
+39569598
+49693975
+38491967
+36642996
+50881246
+52254603
+51987970
+49750558
+49115690
+50608834
+50068216
+51147790
+]0;bryant@sjsu:~/CS131/Worksheet5/CUSTOMERS[bryant@sjsu CUSTOMERS]$ [K[bryant@sjsu CUSTOMERS]$ [K[bryant@sjsu CUSTOMERS]$ [K[bryant@sjsu CUSTOMERS]$ [K[bryant@sjsu CUSTOMERS]$ [K[bryant@sjsu CUSTOMERS]$ exit
+
+Script done on 2022-10-12 03:38:32-04:00
