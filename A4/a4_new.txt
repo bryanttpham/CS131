@@ -1,0 +1,153 @@
+Script started on 2022-10-23 06:17:40-04:00
+]0;bryant@sjsu:~/CS131/A4[bryant@sjsu A4]$ ls ..][K
+[0m[38;5;33mA1[0m  [38;5;33mA2[0m  [38;5;33mA3[0m  [38;5;33mA4[0m  [38;5;33mWorksheet1[0m  [38;5;33mWorksheet2[0m  [38;5;33mWorksheet3[0m  [38;5;33mWorksheet4[0m  [38;5;33mWorksheet5[0m  [38;5;33mWorksheet6[0m
+]0;bryant@sjsu:~/CS131/A4[bryant@sjsu A4]$ ;s .[K[K[K[Kls ..
+[0m[38;5;33mA1[0m  [38;5;33mA2[0m  [38;5;33mA3[0m  [38;5;33mA4[0m  [38;5;33mWorksheet1[0m  [38;5;33mWorksheet2[0m  [38;5;33mWorksheet3[0m  [38;5;33mWorksheet4[0m  [38;5;33mWorksheet5[0m  [38;5;33mWorksheet6[0m
+]0;bryant@sjsu:~/CS131/A4[bryant@sjsu A4]$ ls ..
+[0m[38;5;33mA1[0m  [38;5;33mA2[0m  [38;5;33mA3[0m  [38;5;33mA4[0m  [38;5;33mWorksheet1[0m  [38;5;33mWorksheet2[0m  [38;5;33mWorksheet3[0m  [38;5;33mWorksheet4[0m  [38;5;33mWorksheet5[0m  [38;5;33mWorksheet6[0m
+]0;bryant@sjsu:~/CS131/A4[bryant@sjsu A4]$ cd ..
+]0;bryant@sjsu:~/CS131[bryant@sjsu CS131]$ ls
+[0m[38;5;33mA1[0m  [38;5;33mA2[0m  [38;5;33mA3[0m  [38;5;33mA4[0m  [38;5;33mWorksheet1[0m  [38;5;33mWorksheet2[0m  [38;5;33mWorksheet3[0m  [38;5;33mWorksheet4[0m  [38;5;33mWorksheet5[0m  [38;5;33mWorksheet6[0m
+]0;bryant@sjsu:~/CS131[bryant@sjsu CS131]$ cd ..
+]0;bryant@sjsu:~[bryant@sjsu ~]$ ls
+3_retweets.tsv                     downloaded_tweets_extend_nolf2.tsv           sorted_tweets.tsv
+amazon_reviews_us_Books_v1_02.tsv  downloaded_tweets_extend_original_nolf2.tsv  top100products
+ascii_hashtags.csv                 graph_that_meets_threshold.tsv               top10retweets.txt
+[0m[38;5;33mCS131[0m                              retweets_graph.tsv
+downloaded_hashtags_extend.csv     sorted_retweets.tsv
+]0;bryant@sjsu:~[bryant@sjsu ~]$ /etc/gnuplot-5.4.4/src/gnuplot\[K
+
+	G N U P L O T
+	Version 5.4 patchlevel 4    last modified 2022-07-10 
+
+	Copyright (C) 1986-1993, 1998, 2004, 2007-2022
+	Thomas Williams, Colin Kelley and many others
+
+	gnuplot home:     http://www.gnuplot.info
+	faq, bugs, etc:   type "help FAQ"
+	immediate help:   type "help"  (plot window: hit 'h')
+
+Terminal type is now 'unknown'
+gnuplot> set terminal svg
+
+Terminal type is now 'svg'
+Options are 'size 600,480 fixed enhanced font 'Arial,12' butt dashlength 1.0 '
+gnuplot> set outputa4.cs           a5.    4.csv
+         internal error : STRING operator applied to undefined or non-STRING variable
+
+gnuplot> gnuplot> gnuplot> set output a4.csv    s    svg
+         internal error : STRING operator applied to undefined or non-STRING variable
+
+gnuplot> gnuplot> gnuplot> set output a4.svgg''a4.svg'  
+gnuplot> set to  itle "  'a4    Retweet Clusd  ters"  '
+gnuplot> set datafile separator ",""  \"  t"  
+gnuplot> bin(x,width)=width*floor(x/width)
+gnuplot> plot 'datafile' using (bin($1,binwidth)):(1.0) smooth freq with boxes
+         warning: Cannot find or open file "datafile"
+         No data in plot
+
+gnuplot> plot 'graph.csv' using (bin($1,binwidth)):(1.0) smooth freq with boxes
+         warning: Cannot find or open file "graph.csv"
+         No data in plot
+
+gnuplot> gnuplot> gnuplot> plot 'graph.csv' using (bin($1,binwidth)):(1.0) smooth freq with boxes' using (bin($1,binwidth)):(1.0) smooth freq with boxes  ' using (bin($1,binwidth)):(1.0) smooth freq with boxes  ' using (bin($1,binwidth)):(1.0) smooth freq with boxes  ' using (bin($1,binwidth)):(1.0) smooth freq with boxes  ' using (bin($1,binwidth)):(1.0) smooth freq with boxes  ' using (bin($1,binwidth)):(1.0) smooth freq with boxes  ' using (bin($1,binwidth)):(1.0) smooth freq with boxes  ' using (bin($1,binwidth)):(1.0) smooth freq with boxes  ' using (bin($1,binwidth)):(1.0) smooth freq with boxes  gnuplot>                                                              gnuplot> di    system.div  r
+               ^
+         invalid expression 
+
+gnuplot> system "dir"
+3_retweets.tsv			   downloaded_hashtags_extend.csv		sorted_retweets.tsv
+a4.svg				   downloaded_tweets_extend_nolf2.tsv		sorted_tweets.tsv
+amazon_reviews_us_Books_v1_02.tsv  downloaded_tweets_extend_original_nolf2.tsv	top100products
+ascii_hashtags.csv		   graph_that_meets_threshold.tsv		top10retweets.txt
+CS131				   retweets_graph.tsv
+gnuplot> gnuplot> gnuplot> system "dir"gnuplot>             gnuplot> system.dirgnuplot>           gnuplot> plot 'graph.csv' using (bin($1,binwidth)):(1.0) smooth freq with boxes' using (bin($1,binwidth)):(1.0) smooth freq with boxes  ' using (bin($1,binwidth)):(1.0) smooth freq with boxes  ' using (bin($1,binwidth)):(1.0) smooth freq with boxes  ' using (bin($1,binwidth)):(1.0) smooth freq with boxes  ' using (bin($1,binwidth)):(1.0) smooth freq with boxes  ' using (bin($1,binwidth)):(1.0) smooth freq with boxes  ' using (bin($1,binwidth)):(1.0) smooth freq with boxes  ' using (bin($1,binwidth)):(1.0) smooth freq with boxes  ' using (bin($1,binwidth)):(1.0) smooth freq with boxes  g' using (bin($1,binwidth)):(1.0) smooth freq with boxes  r' using (bin($1,binwidth)):(1.0) smooth freq with boxes  a' using (bin($1,binwidth)):(1.0) smooth freq with boxes  p' using (bin($1,binwidth)):(1.0) smooth freq with boxes  h' using (bin($1,binwidth)):(1.0) smooth freq with boxes  _' using (bin($1,binwidth)):(1.0) smooth freq with boxes  t' using (bin($1,binwidth)):(1.0) smooth freq with boxes  h' using (bin($1,binwidth)):(1.0) smooth freq with boxes  a' using (bin($1,binwidth)):(1.0) smooth freq with boxes  t' using (bin($1,binwidth)):(1.0) smooth freq with boxes  _' using (bin($1,binwidth)):(1.0) smooth freq with boxes  m' using (bin($1,binwidth)):(1.0) smooth freq with boxes  e' using (bin($1,binwidth)):(1.0) smooth freq with boxes  e' using (bin($1,binwidth)):(1.0) smooth freq with boxes  t' using (bin($1,binwidth)):(1.0) smooth freq with boxes  s' using (bin($1,binwidth)):(1.0) smooth freq with boxes  _' using (bin($1,binwidth)):(1.0) smooth freq with boxes  t' using (bin($1,binwidth)):(1.0) smooth freq with boxes  h' using (bin($1,binwidth)):(1.0) smooth freq with boxes  r' using (bin($1,binwidth)):(1.0) smooth freq with boxes  e' using (bin($1,binwidth)):(1.0) smooth freq with boxes  s' using (bin($1,binwidth)):(1.0) smooth freq with boxes  h' using (bin($1,binwidth)):(1.0) smooth freq with boxes  o' using (bin($1,binwidth)):(1.0) smooth freq with boxes  l' using (bin($1,binwidth)):(1.0) smooth freq with boxes  d' using (bin($1,binwidth)):(1.0) smooth freq with boxes  .' using (bin($1,binwidth)):(1.0) smooth freq with boxes  t' using (bin($1,binwidth)):(1.0) smooth freq with boxes  s' using (bin($1,binwidth)):(1.0) smooth freq with boxes  v' using (bin($1,binwidth)):(1.0) smooth freq with boxes  
+         undefined variable: binwidth
+
+gnuplot> bin(x,width)=width*floor(x/width)
+gnuplot> binwidth=5
+gnuplot> gnuplot> gnuplot> binwidth=5gnuplot>           gnuplot> bin(x,width)=width*floor(x/width)gnuplot>                                  gnuplot> plot 'graph_that_meets_threshold.tsv' using (bin($1,binwidth)):(1.0) smooth freq with boxes
+gnuplot> d  di    system "dir"
+3_retweets.tsv			   downloaded_hashtags_extend.csv		sorted_retweets.tsv
+a4.svg				   downloaded_tweets_extend_nolf2.tsv		sorted_tweets.tsv
+amazon_reviews_us_Books_v1_02.tsv  downloaded_tweets_extend_original_nolf2.tsv	top100products
+ascii_hashtags.csv		   graph_that_meets_threshold.tsv		top10retweets.txt
+CS131				   retweets_graph.tsv
+gnuplot> 
+gnuplot> 
+gnuplot> 
+gnuplot> 
+]0;bryant@sjsu:~[bryant@sjsu ~]$ ls
+3_retweets.tsv                     downloaded_hashtags_extend.csv               sorted_retweets.tsv
+[0m[38;5;13ma4.svg[0m                             downloaded_tweets_extend_nolf2.tsv           sorted_tweets.tsv
+amazon_reviews_us_Books_v1_02.tsv  downloaded_tweets_extend_original_nolf2.tsv  top100products
+ascii_hashtags.csv                 graph_that_meets_threshold.tsv               top10retweets.txt
+[38;5;33mCS131[0m                              retweets_graph.tsv
+]0;bryant@sjsu:~[bryant@sjsu ~]$ ls/etc/gnuplot-5.4.4/src/gnuplot[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[K[Khead[K[K[K[Khat[K[K[Kls[K[Khead -n graph_that_meets_three[Kshold.tsv5graph_that_meets_threshold.tsv[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C graph_that_meets_threshold.tsv[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+	
+	
+	
+	
+	18831926
+]0;bryant@sjsu:~[bryant@sjsu ~]$ awk 'NR==FNR {map[$1] = $1; next} $1 in map {print $0}' sorted_retweets.tsv downloaded_tweets_extendd_original_nolf2.tsv | cut -f6 | sort -n -r| uniq -c| sort -n -r | head -n 11
+  38728 
+    238 18831926
+    107 380648579
+     83 16050065
+     45 3453306553
+     39 544732668
+     37 1094971056358637568
+     36 172323296
+     36 140496030
+     31 29447428
+     30 1240682348120866816
+]0;bryant@sjsu:~[bryant@sjsu ~]$ awk 'NR==FNR {map[$1] = $1; next} $1 in map {print $0}' sorted_retweets.tsv downloaded_tweets_extendd_original_nolf2.tsb[Kv| cit =[K[K[K[Ki[K[Khead -n 1
+1004656199885836288	457060718	2018-06-07 09:27:58+00:00	Brexit				David Davis is ex SAS He’s trained to survive. He’s also trained to take people out. #Brexit
+]0;bryant@sjsu:~[bryant@sjsu ~]$ awk 'NR==FNR {map[$1] = $1; next} $1 in map {print $0}' sorted_retweets.tsv downloaded_tweets_extendd_original_nolf2.tsv| head -n 1 | cut -f6 | sort -n -r| uniq -c| sort -n -r | head -n 11[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[59Phead -n 5 graph_that_meets_threshold.tsv
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cawk 'NR==FNR {map[$1] = $1; next} $1 in map {print $0}' sorted_retweets.tsv downloaded_tweets_extendd_original_nolf2.tsv | cut -f6 | sort -n -r| uniq -c| sort -n -r | head -n 11[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C| head -n 1[K[A[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdownloaded_tweets_extend_original_nolf2.tsv | head -n 1[1@c[1@a[1@t[1@ 
+id	author	date	hashtags	referenced	in_reply_to_user_id	public_metrics	text_nolf
+]0;bryant@sjsu:~[bryant@sjsu ~]$ cat downloaded_tweets_extend_original_nolf2.tsv | head -n 1[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cawk 'NR==FNR {map[$1] = $1; next} $1 in map {print $0}' sorted_retweets.tsv downloaded_tweets_extendd_original_nolf2.tsv| head -n 1[C[K[K[K[K[K[K[K[K[K[K cut- [K[K -n 4[K[Kf[Kf[K[Kf 4 | sort -[K[K | uniq -c | sort -n -r | head -n 10
+    968 Ukraine
+    734 LongCovid
+    721 auspol
+    571 COVID19
+    310 StandWithUkraine
+    267 PMQs
+    247 BREAKING
+    181 ableg
+    175 cdnpoli
+    173 Russia
+]0;bryant@sjsu:~[bryant@sjsu ~]$ awk 'NR==FNR {map[$1] = $1; next} $1 in map {print $0}' sorted_retweets.tsv downloaded_tweets_extendd_original_nolf2.tsv| cut -f 4 | sort | uniq -c | sort -n -r | head -n 10[K[K30
+    968 Ukraine
+    734 LongCovid
+    721 auspol
+    571 COVID19
+    310 StandWithUkraine
+    267 PMQs
+    247 BREAKING
+    181 ableg
+    175 cdnpoli
+    173 Russia
+    139 "Russia,Ukraine"
+    123 Omicron
+    118 onpoli
+    116 OneOfUsAllOfUs
+    110 COVIDisAirborne
+    107 insiders
+     98 SOTU
+     91 Brexit
+     89 COVID
+     89 bcpoli
+     88 Kyiv
+     88 ChefsForUkraine
+     84 "Ukraine,Russia"
+     84 RepublicanTTTTTTPredators
+     82 "เจ้าแก้มก้อน,fluke_natouch"
+     82 Mariupol
+     79 Partygate
+     79 DemVoice1
+     74 longcovid
+     72 CovidIsNotOver
+]0;bryant@sjsu:~[bryant@sjsu ~]$ [K[bryant@sjsu ~]$ exit
+
+Script done on 2022-10-23 07:31:09-04:00
