@@ -1,0 +1,34 @@
+Script started on 2022-11-02 00:57:16-04:00
+]0;bryant@sjsu:~/CS131/Worksheet8[bryant@sjsu Worksheet8]$ awk '$12=="N"' amazon_reviews_us_Books_v1_02.tsv > unverified.txt[1@.[1@.[1@/[1@.[1@.[1@/[C[C[C[C[C
+]0;bryant@sjsu:~/CS131/Worksheet8[bryant@sjsu Worksheet8]$ awk '$12=="N"' ../../amazon_reviews_us_Books_v1_02.tsv > unverified.txt[C[1P[1@Y[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Pverified.txt[1Pverified.txt
+]0;bryant@sjsu:~/CS131/Worksheet8[bryant@sjsu Worksheet8]$ cat verified.txt | cut -f 14 |tr 'A-Z' 'a-z' | sed 's/--/ /g' | sed 's/[^a-z ]//g' | tr -s '[[:space:]]' '\n' | sort | uniq -c | sort -n | taiil -n 10
+  11082 it
+  11837 this
+  14619 in
+  14887 i
+  17004 is
+  22407 to
+  24679 a
+  26548 of
+  28087 and
+  51007 the
+]0;bryant@sjsu:~/CS131/Worksheet8[bryant@sjsu Worksheet8]$ cat verified.txt | cut -f 14 |tr 'A-Z' 'a-z' | sed 's/--/ /g' | sed 's/[^a-z ]//g' | tr -s '[[:space:]]' '\n' | sort | uniq -c | sort -n | taiil -n 10[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cuverified.txt | cut -f 14 |tr 'A-Z' 'a-z' | sed 's/--/ /g' | sed 's/[^a-z ]//g' | tr -s '[[:space:]]' '\n' | sort | uniq -c | sort -n | ta[1@i[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cnverified.txt | cut -f 14 |tr 'A-Z' 'a-z' | sed 's/--/ /g' | sed 's/[^a-z ]//g' | tr -s '[[:space:]]' '\n' | sort | uniq -c | sort -n | t[1@a[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+^C
+]0;bryant@sjsu:~/CS131/Worksheet8[bryant@sjsu Worksheet8]$ ^C
+]0;bryant@sjsu:~/CS131/Worksheet8[bryant@sjsu Worksheet8]$ head -n [K 1 unverified.txt
+US	52157117	R18TY4WD19OUAO	141378240X	656010659	Lipstick's Legacy	Books	5	1	1	N	N	Great Work	I read this book over a couple of days.  It was hard to put down.  The things I liked best about this book were very interesting characters that made you think hard about them, a plot filled with suspense to the end, multiple subplots that merged well together, and a lean writing style that let me focus mostly on the characters and the provocative web I found them in.  This is a very thougthfully crafted story. I think most anyone would enjoy this novel.  Highly recommended.	2005-10-14
+]0;bryant@sjsu:~/CS131/Worksheet8[bryant@sjsu Worksheet8]$ head -n 1 unverified.txtcat unverified.txt | cut -f 14 |tr 'A-Z' 'a-z' | sed 's/--/ /g' | sed 's/[^a-z ]//g' | tr -s '[[:space:]]' '\n' | sort | uniq -c | sort -n | ttail -n 10
+ 690451 it
+ 720669 this
+ 838844 in
+ 912556 i
+ 991111 is
+1367653 to
+1463009 of
+1463236 a
+1637551 and
+2918291 the
+]0;bryant@sjsu:~/CS131/Worksheet8[bryant@sjsu Worksheet8]$ exit
+
+Script done on 2022-11-02 01:12:56-04:00
