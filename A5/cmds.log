@@ -1,0 +1,1000 @@
+  336  cd A4
+  337  ls
+  338  cd ..
+  339  ls
+  340  cd ..
+  341  ls
+  342  cd CS131/A4
+  343  ls
+  344  cat authors_of_retweet_post.txt | sort -n | uniq -c | awk '$1>=3' | sort -n -r | sed 's/^ *//g'|tr -s '[:blank:]' ','> a4_output.csv
+  345  ls
+  346  rm 30_hashtags_retweets.txt
+  347  ls
+  348  rm author_retweets.txt
+  349  rm a4_newest.svg
+  350  rm a4_output.csv
+  351  ls
+  352  cat authors_of_retweet_post.txt | sort -n | uniq -c | awk '$1>=3' | sort -n -r | sed 's/^ *//g'|tr -s '[:blank:]' ','> a4_output.csv
+  353  head -n 5 a4_output.csv
+  354  /etc/gnuplot-5.4.4/src/gnuplot
+  355  awk '$12=="N"' ../../amazon_reviews_us_Books_v1_02.tsv > unverified.txt
+  356  awk '$12=="Y"' ../../amazon_reviews_us_Books_v1_02.tsv > verified.txt
+  357  cat verified.txt | cut -f 14 |tr 'A-Z' 'a-z' | sed 's/--/ /g' | sed 's/[^a-z ]//g' | tr -s '[[:space:]]' '\n' | sort | uniq -c | sort -n | tail -n 10
+  358  cat unverified.txt | cut -f 14 |tr 'A-Z' 'a-z' | sed 's/--/ /g' | sed 's/[^a-z ]//g' | tr -s '[[:space:]]' '\n' | sort | uniq -c | sort -n | tail -n 10
+  359  head -n 1 unverified.txt
+  360  cat unverified.txt | cut -f 14 |tr 'A-Z' 'a-z' | sed 's/--/ /g' | sed 's/[^a-z ]//g' | tr -s '[[:space:]]' '\n' | sort | uniq -c | sort -n | tail -n 10
+  361  ls
+  362  head -n 1 amazon_review_us_BOoks_v1_02.tsv
+  363  head -n 1 amazon_review_us_Books_v1_02.tsv
+  364  head -n 1 amazon_reviews_us_Books_v1_02.tsv
+  365  head -n 2 amazon_reviews_us_Books_v1_02.tsv
+  366  head -n 2 amazon_reviews_us_Books_v1_02.tsv |cut -f 12
+  367  head -n 10 amazon_reviews_us_Books_v1_02.tsv |cut -f 12
+  368  awk -F, '$12=="Y"' amazon_review_us_Books_v1_02.tsv | head -n 2
+  369  awk -F, '$12=="Y"' amazon_reviews_us_Books_v1_02.tsv | head -n 2
+  370  awk '$12=="Y"' amazon_reviews_us_Books_v1_02.tsv | head -n 2
+  371  awk '$12=="Y"' amazon_reviews_us_Books_v1_02.tsv > verified.txt
+  372  awk '$12=="N"' amazon_reviews_us_Books_v1_02.tsv > unverified.txt
+  373  head -n 2 verified.txt
+  374  cat verified.txt | cut -f 14 |tr 'A-Z' 'a-z' | sed 's/--/ /g' | sed 's/[^a-z ]//g' | tr -s '[[:space:]]' '\n' | sort | uniq -c | sort -n | tail -n1
+  375  cat verified.txt | cut -f 14 |tr 'A-Z' 'a-z' | sed 's/--/ /g' | sed 's/[^a-z ]//g' | tr -s '[[:space:]]' '\n' | sort | uniq -c | sort -n | tail -n 10
+  376  cat verified.txt | cut -f 14 |tr 'A-Z' 'a-z' | head -n 10
+  377  cat verified.txt | cut -f 14 |tr 'A-Z' 'a-z' | head -n 1
+  378  cat verified.txt | cut -f 14 |tr 'A-Z' 'a-z' | sed 's/--/ /g' | head -n1
+  379  cat verified.txt | cut -f 14 |tr 'A-Z' 'a-z' | sed 's/--/ /g' | sed 's/[^a-z ]//g' |head -n 1
+  380  cat verified.txt | cut -f 14 |tr 'A-Z' 'a-z' | sed 's/--/ /g' | sed 's/[^a-z ]//g' | tr -s '[[:space:]]' '\n' | head -n 1
+  381  cat verified.txt | cut -f 14 |tr 'A-Z' 'a-z' | sed 's/--/ /g' | sed 's/[^a-z ]//g' | tr -s '[[:space:]]' '\n' | head -n 3
+  382  cat verified.txt | cut -f 14 |tr 'A-Z' 'a-z' | sed 's/--/ /g' | sed 's/[^a-z ]//g' | tr -s '[[:space:]]' '\n' | sort | uniq -c | sort -n -r| head -n 1
+  383  cat verified.txt | cut -f 14 |tr 'A-Z' 'a-z' | sed 's/--/ /g' | sed 's/[^a-z ]//g' | tr -s '[[:space:]]' '\n' | sort | uniq -c | sort -n -r| head -n 10
+  384  cat verified.txt | cut -f 14 |tr 'A-Z' 'a-z' | sed 's/--/ /g' | sed 's/[^a-z ]//g' | tr -s '[[:space:]]' '\n' | sort | uniq -c | sort -n | tail -n 10
+  385  5~
+  386  cd ~
+  387  cd ..
+  388  ls
+  389  cd ..
+  390  ls
+  391   /mnt/scratch
+  392  cd  /mnt/scratch
+  393  ls
+  394  cd bryant
+  395  cd ..
+  396  ls
+  397  cd ..
+  398  ls
+  399  cd scratch
+  400  cd bryant
+  401  ls
+  402  cd ..
+  403  ls
+  404  cd mnt
+  405  cd scratch
+  406  ls
+  407  cd bryant
+  408  ls
+  409  git status
+  410  cd CS131
+  411  ls
+  412  git status
+  413  git add Worksheet8
+  414  git commit -m "worksheet 8 submission"
+  415  git push 
+  416  cd CS131
+  417  mkdir Worksheet8
+  418  cd Worksheet8
+  419  script ws8.txt
+  420  history > cmds.log
+  421  lss ws8.txt
+  422  less ws8.txt
+  423  vi ws8.txt
+  424  cd ..
+  425  git status
+  426  git add Worksheet8
+  427  git add Worksheet8/
+  428  git gc
+  429  ls
+  430  cd ..
+  431  ls mnt/scratc
+  432  ls mnt/scratch
+  433  ls ../../../mnt/scratch
+  434  ls ../../../mnt/scratch/bryant
+  435  mv CS131 ../../../mnt/scratch/bryant
+  436  cd ..
+  437  cd Worksheet9
+  438  touch randomsample.sh
+  439  vi randomsample.sh
+  440  ls ../..
+  441  ls ../../..
+  442  ls ../../../..
+  443  ls ../../../../../../
+  444  ls ../../../../../
+  445  ls ../../../../../usr
+  446  ls ../../../../../root
+  447  ls ../../../../../tmp
+  448  ls ../../../../../usr
+  449  ls ../../../../../usr/src
+  450  ls ../../../../../home
+  451  ls ../../../../../home/bryant
+  452  vi randomsample.sh
+  453  head -n 100 amazon_reviews_us_Books_v1_02.tsv > test.txt
+  454  vi randomsample.sh
+  455  ../../../../../home/bryant/
+  456  ls ../../../../../home/bryant/amazon_reviews_us_Books_v1_02.tsv
+  457  vi randomsample.sh
+  458   ./randomsample.sh
+  459  ./randomsample.sh
+  460  ls -l randomsample.sh
+  461  chmod u+x randomsample.sh
+  462  ls -l randomsample.sh
+  463  ./randomsample.sh
+  464  vi randomsample.sh
+  465  ./randomsample.sh
+  466  vi randomsample.sh
+  467  ./randomsample.sh
+  468  ls
+  469  cd ..
+  470  ls
+  471  cd ..
+  472  ls
+  473  cd mnt
+  474  ls
+  475  cd scratch
+  476  ls
+  477  ls brian
+  478  cd brian
+  479  ls
+  480  cd ..
+  481  ls harrison
+  482  ls allen
+  483  cd ..
+  484  ls bryant
+  485  cd bryant
+  486  ls
+  487  cd scratch
+  488  ls
+  489  cd bryant
+  490  ls
+  491  cd CS131
+  492  ls
+  493  mkdir Worksheet9
+  494  cd Worksheet9
+  495  ls 
+  496  cd Worksheet9
+  497  script ws9.txt
+  498  vi ws9.txt
+  499  cp a9.txt a9.new.txt
+  500  ls
+  501  cp ws9.txt ws9.new.txt
+  502  sed -i "s/^M//g" a1.new.txt
+  503  sed -i "s/^M//g" ws9.new.txt
+  504  sed -i "s/^.*^G//g" ws9.new.txt
+  505  sed -i -e 's/\x1b\[[0-9;]*m//g' ws9.new.txt
+  506  vi ws9.new.txt
+  507  cd ..
+  508  git status
+  509  git add Worksheet9
+  510  git commit -m "worksheet9 submission"
+  511  git push 
+  512  git status
+  513  ls
+  514  percentage = $(($RANDOM % 100))
+  515  echo $(($RANDOM % 100))
+  516  testing1= $(($RANDOM % 100))
+  517  testing = $(($RANDOM % 100))
+  518  testing = echo $(($RANDOM % 100))
+  519  testing = 2
+  520  test = 2
+  521  test=2
+  522  echo test
+  523  echo $(test)
+  524  echo $test
+  525  testing=$(($RANDOM % 100))
+  526  echo testing
+  527  echo $testing
+  528  total_lines=20
+  529  count=((testing/100)*$total_lines)
+  530  count=(($testing/100)*$total_lines)
+  531  count=($testing/100)*$total_lines
+  532  echo $count
+  533  let count=($testing/100)*$total_lines
+  534  echo $count
+  535  count
+  536  echo $count
+  537  let count=($testing/100)*$total_lines
+  538  let count=($testing/100.0)*$total_lines
+  539  count=($testing*$total_lines)/100
+  540  echo $count
+  541  let count=($testing*$total_lines)/100
+  542  echo $count
+  543  ls
+  544  total_lines=wc -l amazon_reviews_us_Books_v1_02.tsv
+  545  wc -l amazon_reviews_us_Books_v1_02.tsv
+  546  percentage=$(($RANDOM % 100))
+  547  echo $percentage
+  548  keep= $(($RANDOM %2))
+  549  keep=$(($RANDOM %2))
+  550  keep
+  551  echo $keep
+  552  echo $(keep)
+  553  echo $keep
+  554  echo $(($RANDOM % 100))
+  555  echo $(($RANDOM %2))
+  556  echo $(($RANDOM % 2))
+  557  percentage=$(($RANDOM % 100))
+  558  echo $percentage
+  559  percentage=$(($RANDOM % 100))
+  560  echo $percentage
+  561  percentage=$(($RANDOM % 100))
+  562  echo $percentage
+  563  percentage=$(($RANDOM % 100))
+  564  echo $percentage
+  565  let count=($percentage*3105521)/100
+  566  echo $count
+  567  percentage=$(($RANDOM % 100))
+  568  let count=($percentage*3105521)/100
+  569  echo $count
+  570  ls ..
+  571  ls ../../../mnt/scratch/bryant
+  572  cd ..
+  573  ls
+  574  ls ../
+  575  ls ../..
+  576  ls /../..
+  577  ls ../..
+  578  ls ../../
+  579  cd ..
+  580  ;s
+  581  ls
+  582  cd ~
+  583  ls
+  584  ls ../
+  585  ls ../..
+  586  ls
+  587  head -n 100 amazon_reviews_us_Books_v1_02.tsv > test.txt
+  588  head -n 2 test.txt
+  589  cd ..
+  590  ls
+  591  cd mnt
+  592  ls
+  593  cd scratch/bryant
+  594  ls
+  595  cd CS131
+  596  ls
+  597  cd Worksheet9
+  598  ls
+  599  vi randomsample.sh
+  600  ./randomsample.sh
+  601  vi randomsample.sh
+  602  ./randomsample.sh
+  603  vi randomsample.sh
+  604  ./randomsample.sh
+  605  vi randomsample.sh
+  606  ./randomsample.sh
+  607  vi randomsample.sh
+  608  ls
+  609  head -n test.txt
+  610  head -n 10 test.txt
+  611  rm test.txt
+  612  keep= $(($RANDOM % 2))
+  613  keep=$(($RANDOM % 2))
+  614  echo $keep
+  615  keep=$(($RANDOM % 2))
+  616  echo $keep
+  617  keep=$(($RANDOM % 2))
+  618  echo $keep
+  619  if [$keep -eq 1]; then echo 3 fi
+  620  if [$keep -eq 1]; then echo 3 fi;
+  621  if [$keep -eq 1]; then echo 3; fi
+  622  if [$keep -eq 1 ]; then echo 3; fi
+  623  if [ $keep -eq 1 ]; then echo 3; fi
+  624  ls
+  625  cd ..
+  626  ls
+  627  cd ,mt
+  628  cd mnt
+  629  ls 
+  630  cd scratch
+  631  ls
+  632  cd bryant
+  633  ls
+  634  cd CS131
+  635  ls 
+  636  cd Worksheet 9
+  637  cd Worksheet9
+  638  ls
+  639  mv ws9.txt ../
+  640  git status
+  641  ls
+  642  git log
+  643  git push
+  644  cd ..
+  645  $ git reset --soft HEAD~1
+  646  git reset --soft HEAD~1
+  647  git status
+  648  ls
+  649  cd Worksheet9
+  650  ls
+  651  vi ws9.new.txt
+  652  cd ..
+  653  cd mnt/
+  654  ls
+  655  cd scratch
+  656  ls
+  657  cd bryant
+  658  ls
+  659  cd CS131
+  660  git status
+  661  git add ws9.txt
+  662  git status
+  663  git restore .
+  664  git status
+  665  git reset
+  666  git status
+  667  ls
+  668  mv ws9.txt ../
+  669  git clean -f
+  670  git status
+  671  cd Worksheet9
+  672  ls
+  673  mv ws9.txt ../../
+  674  ls
+  675  rm test.txt
+  676  cd ..
+  677  ls
+  678  cd cs131
+  679  cd CS131
+  680  ls
+  681  cd Worksheet9
+  682  ls
+  683  cd .. 
+  684  git ad .
+  685  git add . 
+  686  git commit -m " worksheet9 submission" 
+  687  git push 
+  688   git show commit_id --name-only
+  689  git show commit_id --name-only
+  690  git log --branches --not --remotes --simplify-by-decoration --decorate --oneline
+  691  cd ..
+  692  cd CS131
+  693  cd Worksheet8
+  694  ls
+  695  mv unverified.txt ../../
+  696  ls
+  697  cd ..
+  698  git push
+  699  cd ..
+  700  ls
+  701   ! [remote rejected] main -> main (pre-receive hook declined)git log --branches --not --remotes --simplify-by-decoration --decorate --oneline
+  702  git log --branches --not --remotes --simplify-by-decoration --decorate --oneline
+  703  ls 
+  704  cd CS131
+  705  ls
+  706  cd Worksheet8
+  707  ls
+  708  vi ws8.txt
+  709  mv verified.txt ../../
+  710  cd ..
+  711  git status
+  712  git add .
+  713  git commit -m "update"
+  714  git push\
+  715  git push
+  716  git log -p
+  717  git reset --soft HEAD~1
+  718  git status
+  719  git reset --soft HEAD~1
+  720  git status
+  721  git reset --soft HEAD~1
+  722  git status
+  723  git reset --soft HEAD~1
+  724  git status
+  725  git pull 
+  726  ls
+  727  cd Worksheet8
+  728  ls
+  729  cd Worksheet9
+  730  cd ..
+  731  cd Worksheet9
+  732  ls
+  733  git status
+  734  git add .
+  735  git commit -m "submission" 
+  736  git push
+  737  ls
+  738  cd ..
+  739  ls
+  740  cd mnt
+  741  cd Scratch/Bryant/CS131
+  742  cd Scrath
+  743  ls
+  744  cd scratch
+  745  cd Bryant/CS131
+  746  cd bryant/CS131
+  747  ls
+  748  cd A5
+  749  mkdir A5
+  750  cd A3
+  751  ls
+  752  vi numbers.py
+  753  mv numbers.py ../../home/bryant\
+  754  mv numbers.py ../../home/bryant
+  755  mv numbers.py ../../../home/bryant
+  756  mv numbers.py ../../
+  757  cd ..
+  758  ls
+  759  cd scratch
+  760  ls
+  761  cd bryant 
+  762  ls
+  763  mv numbers.py ../../home/Bryant
+  764  mv numbers.py ../../
+  765  mv numbers.py ../../home/bryant
+  766  ls ../../
+  767  ls ../../../
+  768  mv numbers.py ../../../home/bryant
+  769  cd..
+  770  cd ..
+  771  ls
+  772  cd ..
+  773  ls
+  774  cd home
+  775  ls
+  776  cd bryant 
+  777  ls 
+  778  vi 
+  779  vi numbers.py
+  780  chmod u+rx numbers.sh
+  781  cp numbers.py numbers.sh
+  782  ls
+  783  rm numbers.py
+  784  vi numbers.sh
+  785  chmod u+rx numbers.sh
+  786  time sh numbers.sh
+  787  ls ../../../
+  788  ls ../../../mnt/scratch/bryant
+  789  ls ../../../mnt/scratch/bryant/CS131/Worksheet10
+  790  history > ../../../mnt/scratch/bryant/CS131/Worksheet10
+  791  history > ../../../mnt/scratch/bryant/CS131/Worksheet10/cmds.log
+  792  cd ..
+  793  ls
+  794  cd ..
+  795  ls
+  796  cd mnt
+  797  cd scratch
+  798  cd bryant
+  799  ls
+  800  cd CS131
+  801  ls
+  802  mkdir Worksheet10
+  803  cd Worksheet10
+  804  touch numbers.py
+  805  vi numbers.py
+  806  script ws10.txt
+  807  pwd
+  808  ls
+  809  cd ..
+  810  ls
+  811  cd mnt
+  812  ls
+  813  cd scratch
+  814  cd ../../
+  815  ls
+  816  cd home
+  817  ls
+  818  cd bryant 
+  819  ls
+  820  pwd
+  821  time python3 numbers.py
+  822  ls
+  823  touch numbers.py
+  824  vi numbers.py
+  825  time python3 numbers.py
+  826  cd ../../../mnt/scratch/bryant/CS131/Worksheet10/cmds.log
+  827  cd ../../../mnt/scratch/bryant/CS131/Worksheet10/
+  828  ls
+  829  vi ws10.txt
+  830  cp ws10.txt ws10.new.txt
+  831  sed -i "s/^M//g" ws10.new.txt
+  832  sed -i "s/^.*^G//g"ws10.new.txt
+  833  sed -i "s/^.*^G//g" ws10.new.txt
+  834  sed -i -e 's/\x1b\[[0-9;]*m//g' ws10.new.txt
+  835  vi ws10.new.txt
+  836  sed -i -e 's/\x1b\[[0-9;]*m//g'
+  837  vi ws10.new.txt
+  838  cd ..
+  839  cd CS131
+  840  git status
+  841  git add Worksheet10
+  842  git commit -m "worksheet10 submission"
+  843  git push 
+  844  ls
+  845  head -n 1 downloaded_tweets_extend_nolf2.tsv
+  846  ls
+  847  ls ../../../
+  848  ls ../../../mnt/scratch
+  849  ls ../../../mnt/scratch/bryant/
+  850  ls ../../../mnt/scratch/bryant/CS131
+  851  ls ../../../mnt/scratch/bryant/CS131/A5
+  852  ls
+  853  mv downloaded_tweets_extend_original_nolf2.tsv ../../../mnt/scratch/bryant/CS131/A5
+  854  ;s
+  855  ls
+  856  grep retweeted downloaded_tweets_extend_nolf2.tsv
+  857  ls
+  858  cd ../../../mnt/scratch/bryant/CS131/Worksheet10/
+  859  cd ..
+  860  ls
+  861  cd A3
+  862  ;s
+  863  ls
+  864  head -n 3 cluster_hashtags.txt
+  865  head -n 3 graph.csv
+  866  head -n 10 graph.csv
+  867  head -n 10 largeClusters.csv
+  868  head -n 10 new_cluster.csv
+  869  head -n 10 new_cluster.tsv
+  870  head -n 10 q2.csv
+  871  head -n 10 q1.csv
+  872  cd ..
+  873  ls
+  874  cd A5
+  875  ls
+  876  script a5.txt
+  877  cd ..
+  878  cd A4
+  879  cd ..
+  880  cd A3
+  881  ls
+  882  vi q2.csv
+  883  awk -F ','{print $1} q2.csv > influences.tsv
+  884  awk -F ','{print $1}' q2.csv > influences.tsv
+  885  awk -F ',' '{print $1}' q2.csv > influences.tsv
+  886  head -n 5 influences.tsv
+  887  mv influences.tsv influencers.tsv
+  888  mv influences.tsv ../A5
+  889  mv influencers.tsv ../A5
+  890  cd ..
+  891  cd A5
+  892  ls
+  893  fgrep -f influencers.tsv downloaded_tweets_extend_original_nolf2.tsv | less
+  894  fgrep -f influencers.tsv downloaded_tweets_extend_original_nolf2.tsv | wc
+  895  fgrep -f influencers.tsv downloaded_tweets_extend_original_nolf2.tsv | awk 
+  896  grep replied_to downloaded_tweets_extend_original_nolf2_NOBOT.tsv > downloaded_tweets_extend_original_nolf2_NOBOT_repliedto.tsv
+  897  ls
+  898  rm downloaded_tweets_extend_original_nolf2_NOBOT_repliedto.tsv
+  899  grep replied_to downloaded_tweets_extend_original_nolf2.tsv > downloaded_tweets_extend_original_nolf2_repliedto.tsv
+  900  head -n 2 downloaded_tweets_extend_original_nolf2_repliedto.tsv
+  901  grep retweeted downloaded_tweets_extend_original_nolf2.tsv > downloaded_tweets_extend_original_nolf2_retweeted.tsv
+  902  fgrep -f influencers.tsv downloaded_tweets_extend_original_nolf2_repliedto.tsv
+  903  ls
+  904  fgrep -f influencers.tsv downloaded_tweets_extend_original_nolf2_retweeted.tsv 
+  905  cat downloaded_tweets_extend_original_nolf2_retweeted.tsv | wc
+  906  grep retweeted downloaded_tweets_extend_original_nolf2.tsv > downloaded_tweets_extend_original_nolf2_retweeted.tsv
+  907  ls
+  908  rm downloaded_tweets_extend_oiriginal_nolf2_retweeted.tsv
+  909  rm downloaded_tweets_extend_original_nolf2_retweeted.tsv
+  910  grep retweeted downloaded_tweets_extend_original_nolf2.tsv 
+  911  grep retweeted downloaded_tweets_extend_nolf2.tsv
+  912  ls
+  913  cd cat downloaded_tweets_extend_original_nolf2_repliedto.tsv | wc
+  914  cat downloaded_tweets_extend_original_nolf2_repliedto.tsv | wc
+  915  ls 
+  916  ls
+  917  fgrep -f influencers.tsv downloaded_tweets_extend_original_nolf2_repliedto.tsv | wc
+  918  cd ..
+  919  cd A3
+  920  ls
+  921  head -n graph.csv
+  922  head -n 4 graph.csv
+  923  head -n 4 cluster_hashtags.txt
+  924  head -n 4 largeClusters.csv
+  925  ls
+  926  cd ..
+  927  cd A5
+  928  ls
+  929  for INFL in ` cat influencers.tsv` ; do grep $INFL downloaded_tweets_extend_original_nolf2_repliedto.tsv | awk -F "\t" '{print $4}' | tr "," "\n" | sed "s\/"//g" > infl _replies/ $INFL.hashtags ; done
+  930  for INFL in ` cat influencers.tsv` ; do grep $INFL downloaded_tweets_extend_original_nolf2_repliedto.tsv | awk -F "\t" '{print $4}' | tr "," "\n" | sed "s\/"//g" > infl_replies/ $INFL.hashtags ; done 
+  931  for INFL in `cat influencers.tsv` ; do grep $INFL downloaded_tweets_extend_original_nolf2_repliedto.tsv | awk -F "\t" '{print $4}' | tr "," "\n" | sed "s/\"//g" > infl_replies/$INFL.hashtags ; done 
+  932  ls
+  933  cd infl_replies/
+  934  mkdir infl_replies
+  935  for INFL in `cat influencers.tsv` ; do grep $INFL downloaded_tweets_extend_original_nolf2_repliedto.tsv | awk -F "\t" '{print $4}' | tr "," "\n" | sed "s/\"//g" > infl_replies/$INFL.hashtags ; done
+  936  ls infl_replies
+  937  cat 14260960.hashtags
+  938  cat infl_replies/14260960.hashtags
+  939  ls
+  940  awk -F "\t" '{print $4}' downloaded_tweets_extend_original_nolf2_repliedto.tsv | tr "," '\n" | wc
+  941  awk -F "\t" '{print $4}' downloaded_tweets_extend_original_nolf2_repliedto.tsv | tr "," "\n" | wc
+  942  cd infl_replies
+  943  for FILE in `ls` ; do for HASHTAG in `cat $FILE | uniq` ; do count_H_in_C=`grep $HASHTAG $FILE | wc -l` ; count_hashtags_in_C=`cat $FILE | wc -l` ; count_H_entire_dataset=`grep $HASHTAGS ../downloaded_tweets_extend_original_nolf2_repliedto.tsv |wc -l`; count_hashtags_entire_dataset=7754 ; frequency_H_in_C=`echo "$count_H_in_C / $count_hashtags_in_C" | bc -l` ; frequency_H_overall=`echo "$count_H_entire_dataset / $count_hashtags_entire_dataset" | bc -l` ; relative_frequency_H_C=`echo "$frequency_H_in_C / $frequency_H_overall" | bc -l` ; echo -e "$HASHTAG\t${FILE//[!0-9]/}\t$relative_frequency_H_C\t$frequency_H_in_C\t$frequency_H_overall\t$count_H_in_C\t$count_hashtags_in_C\t$count_H_entire_dataset\t$count_hashtags_entire_dataset"; done ; done > ../ replied_hashtags_stats.tsv
+  944  for FILE in `ls` ; do for HASHTAG in `cat $FILE | uniq` ; do count_H_in_C=`grep $HASHTAG $FILE | wc -l` ; count_hashtags_in_C=`cat $FILE | wc -l` ; count_H_entire_dataset=`grep $HASHTAGS ../downloaded_tweets_extend_original_nolf2_repliedto.tsv |wc -l`; count_hashtags_entire_dataset=7754 ; frequency_H_in_C=`echo "$count_H_in_C / $count_hashtags_in_C" | bc -l` ; frequency_H_overall=`echo "$count_H_entire_dataset / $count_hashtags_entire_dataset" | bc -l` ; relative_frequency_H_C=`echo "$frequency_H_in_C / $frequency_H_overall" | bc -l` ; echo -e "$HASHTAG\t${FILE//[!0-9]/}\t$relative_frequency_H_C\t$frequency_H_in_C\t$frequency_H_overall\t$count_H_in_C\t$count_hashtags_in_C\t$count_H_entire_dataset\t$count_hashtags_entire_dataset"; done ; done > ../replied_hashtags_stats.tsv
+  945  ls
+  946  for FILE in `ls` ; do for HASHTAG in `cat $FILE | uniq` ; do count_H_in_C=`grep $HASHTAG $FILE | wc -l` ; count_hashtags_in_C=`cat $FILE | wc -l` ; count_H_entire_dataset=`grep $HASHTAGS ../downloaded_tweets_extend_original_nolf2_repliedto.tsv |wc -l`; count_hashtags_entire_dataset=7754 ; frequency_H_in_C=`echo "$count_H_in_C / $count_hashtags_in_C" | bc -l` ; frequency_H_overall=`echo "$count_H_entire_dataset / $count_hashtags_entire_dataset" | bc -l` ; relative_frequency_H_C=`echo "$frequency_H_in_C / $frequency_H_overall" | bc -l` ; echo -e "$HASHTAG\t${FILE//[!0-9]/}\t$relative_frequency_H_C\t$frequency_H_in_C\t$frequency_H_overall\t$count_H_in_C\t$count_hashtags_in_C\t$count_H_entire_dataset\t$count_hashtags_entire_dataset"; done ; done > ../replied_hashtags_stats.tsv [B
+  947  ls -lt 
+  948  ls -ltr
+  949  ls
+  950  ps -e
+  951  ls
+  952  head -n 10 replied_hashtags_stats.tsv
+  953  ls
+  954  for FILE in `ls | grep -v replied_hashtags_stats.tsv` ; do for HASHTAG in `cat $FILE`; do count_H_in_C=`grep $HASHTAG $FILE | wc -l` ; count_hashtags_in_C=`cat $FILE | wc -l` ; count_H_entire_dataset=`grep $HASHTAGS ../downloaded_tweets_extend_original_nolf2_repliedto.tsv |wc -l` ; count_hashtags_entire_dataset=7754; frequency_H_in_C=`echo "$count_H_in_C / $count_hashtags_in_C" | bc -l`; frequency_H_overall=`echo "$count_H_entire_dataset / $count_hashtags_entire_dataset" | bc -l` ; relative_frequency_H_C=`echo "$frequency_H_in_C / $frequency_H_overall" | bc -l` ; echo "$HASHTAG $FILE $relative_frequency_H_C $frequency_H_in_C $frequency_H_overall $count_H_in_C $count_hashtags_in_C $count_H_entire_dataset $count_hashtags_entire_dataset " ; done ; done
+  955  ls
+  956  for FILE in `ls | grep -v replied_hashtags_stats.tsv` ; do for HASHTAG in `cat $FILE`; do count_H_in_C=`grep $HASHTAG $FILE | wc -l` ; count_hashtags_in_C=`cat $FILE | wc -l` ; count_H_entire_dataset=`grep $HASHTAGS ../downloaded_tweets_extend_original_nolf2_repliedto.tsv |wc -l` ; count_hashtags_entire_dataset=7754; frequency_H_in_C=`echo "$count_H_in_C / $count_hashtags_in_C" | bc -l`; frequency_H_overall=`echo "$count_H_entire_dataset / $count_hashtags_entire_dataset" | bc -l` ; relative_frequency_H_C=`echo "$frequency_H_in_C / $frequency_H_overall" | bc -l` ; echo "$HASHTAG $FILE $relative_frequency_H_C $frequency_H_in_C $frequency_H_overall $count_H_in_C $count_hashtags_in_C $count_H_entire_dataset $count_hashtags_entire_dataset " ; done ; done
+  957  ls
+  958  vi replied_hashtags_stats.tsv
+  959  rm replied-hashtags_stats.tsv
+  960  rm replied_hashtags_stats.tsv
+  961  ls
+  962  for FILE in `ls` ; do for HASHTAG in `cat $FILE`; do count_H_in_C=`grep $HASHTAG $FILE | wc -l` ; count_hashtags_in_C=`cat $FILE | wc -l` ; count_H_entire_dataset=`grep $HASHTAGS ../downloaded_tweets_extend_original_nolf2_repliedto.tsv | wc -l` ; count_hashtags_entire_dataset=7754; frequency_H_in_C=`echo "$count_H_in_C / $count_hashtags_in_C" | bc -l`; frequency_H_overall=`echo "$count_H_entire_dataset / $count_hashtags_entire_dataset" | bc -l` ; relative_frequency_H_C=`echo "$frequency_H_in_C / $frequency_H_overall" | bc -l` ; echo "$HASHTAG $FILE $relative_frequency_H_C $frequency_H_in_C $frequency_H_overall $count_H_in_C $count_hashtags_in_C $count_H_entire_dataset $count_hashtags_entire_dataset " ; done ; done
+  963  for FILE in `ls` ; do for HASHTAG in `cat $FILE`; do count_H_in_C=`grep $HASHTAG $FILE | wc -l` ; count_hashtags_in_C=`cat $FILE | wc -l` ; count_H_entire_dataset=`grep $HASHTAGS ../downloaded_tweets_extend_original_nolf2_repliedto.tsv | wc -l` ; count_hashtags_entire_dataset=7754; frequency_H_in_C=`echo "$count_H_in_C / $count_hashtags_in_C" | bc -l`; frequency_H_overall=`echo "$count_H_entire_dataset / $count_hashtags_entire_dataset" | bc -l` ; relative_frequency_H_C=`echo "$frequency_H_in_C / $frequency_H_overall" | bc -l` ; echo "$HASHTAG $FILE   $relative_frequency_H_C $frequency_H_in_C $frequency_H_overall $count_H_in_C $count_hashtags_in_C $count_H_entire_dataset $count_hashtags_entire_dataset " ; done ; done
+  964  for FILE in `ls` ; do for HASHTAG in `cat $FILE`; do count_H_in_C=`grep $HASHTAG $FILE | wc -l` ; count_hashtags_in_C=`cat $FILE | wc -l` ; count_H_entire_dataset=`grep $HASHTAGS ../downloaded_tweets_extend_original_nolf2_repliedto.tsv | wc -l` ; count_hashtags_entire_dataset=7754; frequency_H_in_C=`echo "$count_H_in_C / $count_hashtags_in_C" | bc -l`; frequency_H_overall=`echo "$count_H_entire_dataset / $count_hashtags_entire_dataset" | bc -l` ; relative_frequency_H_C=`echo "$frequency_H_in_C / $frequency_H_overall" | bc -l` ; echo "$HASHTAG $FILE   $relative_frequency_H_C $frequency_H_in_C $frequency_H_overall $count_H_in_C $count_hashtags_in_C $count_H_entire_dataset $count_hashtags_entire_dataset" ; done ; done
+  965  ls ..
+  966  for FILE in `ls` ; do for HASHTAG in `cat $FILE`; do count_H_in_C=`grep $HASHTAG $FILE | wc -l` ; count_hashtags_in_C=`cat $FILE | wc -l` ; count_H_entire_dataset=`grep $HASHTAGS ../downloaded_tweets_extend_original_nolf2_repliedto.tsv | wc -l` ; count_hashtags_entire_dataset=7754; frequency_H_in_C=`echo "$count_H_in_C / $count_hashtags_in_C" | bc -l`; frequency_H_overall=`echo "$count_H_entire_dataset / $count_hashtags_entire_dataset" | bc -l` ; relative_frequency_H_C=`echo "$frequency_H_in_C / $frequency_H_overall" | bc -l` ; echo "$HASHTAG" ; done ; done
+  967  for FILE in `ls` ; do for HASHTAG in `cat $FILE`; do count_H_in_C=`grep $HASHTAG $FILE | wc -l` ; count_hashtags_in_C=`wc -l $FILE` ; count_H_entire_dataset=`grep HASHTAG ../downloaded_tweets_extend_original_nolf2_repliedto.tsv | wc -l` ; count_hashtags_entire_dataset=7754; echo "$HASHTAGS\t$FILE\tcount_H_in_C\tcount_hashtags_in_C\tcount_H_entire_dataset\tcount_hashtags_entire_dataset"  ; done ; done 
+  968  for FILE in `ls` ; do for HASHTAG in `cat $FILE`; do count_H_in_C=`grep $HASHTAG $FILE | wc -l` ; count_hashtags_in_C=`wc -l $FILE` ; count_H_entire_dataset=`grep HASHTAG ../downloaded_tweets_extend_original_nolf2_repliedto.tsv | wc -l` ; count_hashtags_entire_dataset=7754; echo "$HASHTAGS\t$FILE
+  969  for FILE in `ls` ; do for HASHTAG in `cat $FILE`; do count_H_in_C=`grep $HASHTAG $FILE | wc -l` ; count_hashtags_in_C=`wc -l $FILE` ; count_H_entire_dataset=`grep HASHTAG ../downloaded_tweets_extend_original_nolf2_repliedto.tsv | wc -l` ; count_hashtags_entire_dataset=7754; echo "$HASHTAGS\t$FILE\tcount_H_in_C\tcount_hashtags_in_C\tcount_H_entire_dataset\tcount_hashtags_entire_dataset"  ; done ; done
+  970  for FILE in `ls` ; do for HASHTAG in `cat $FILE`; do count_H_in_C=`grep $HASHTAG $FILE | wc -l` ; count_hashtags_in_C=`wc -l $FILE` ; count_H_entire_dataset=`grep HASHTAG ../downloaded_tweets_extend_original_nolf2_repliedto.tsv | wc -l` ; count_hashtags_entire_dataset=7754; frequency_H_in_C=`echo "$count_H_in_C / $count_hashtags_in_C" | bc -l` ; echo "$HASHTAGS\t$FILE\tcount_H_in_C\tcount_hashtags_in_C\tcount_H_entire_dataset\tcount_hashtags_entire_dataset"  ; done ; done
+  971  awk -F "\t" '{print $4}' downloaded_tweets_extend_original_nolf2_repliedto.tsv | tr "," '\n" | wc
+  972  awk -F "\t" '{print $4}' downloaded_tweets_extend_original_nolf2_repliedto.tsv | tr "," "\n" | wc 
+  973  cd..
+  974  cd ..
+  975  awk -F "\t" '{print $4}' downloaded_tweets_extend_original_nolf2_repliedto.tsv | tr "," "\n" | wc 
+  976  cd ..
+  977  cd A4
+  978  ls
+  979  cp authors_retweets_post.txt retweet_influencers.tsv
+  980  cp authors_of_retweets_post.txt retweet_influencers.tsv
+  981  cp authors_of_retweet_post.txt retweet_influencers.tsv
+  982  mv retweets_influencers.tsv ../A5
+  983  mv retweet_influencers.tsv ../A5
+  984  ls
+  985  cd ..
+  986  ls
+  987  cd A5
+  988  ls
+  989  for i in `cat unique_authors.tsv`; do  grep -E $i downloaded_tweets_extend_original_nolf2.tsv ; done >> downloaded_tweets_extend_retweeted.tsv
+  990  ls
+  991  head -n 3 unique_authors.tsv
+  992  mv unique_authors.tsv retweet_post.tsv
+  993  grep "retweeted" downloaded_tweets_extend_nolf2.tsv > downloaded_tweets_extend_nolf2_retweets.tsv
+  994  for i in `awk '{print $1}' retweet_post.tsv`; do  grep -E $i downloaded_tweets_extend_original_nolf2.tsv ; done >> downloaded_tweets_extend_nolf2_retweets.tsv
+  995  wc downloaded_tweets_extend_nolf2_retweets.tsv
+  996  for INFL in `cat reweet_influencers.tsv` ; do grep $INFL downloaded_tweets_extend_nolf2_retweets.tsv | awk -F "\t" '{print $4}' | tr "," "\n"|sed "s/\"//g"; done 
+  997  for INFL in `cat retweet_influencers.tsv` ; do grep $INFL downloaded_tweets_extend_nolf2_retweets.tsv | awk -F "\t" '{print $4}' | tr "," "\n"|sed "s/\"//g"; done 
+  998  for INFL in `cat retweet_influencers.tsv` ; do grep $INFL downloaded_tweets_extend_nolf2_retweets.tsv | awk -F "\t" '{print $4}' | tr "," "\n"|sed "s/\"//g"; done |wc
+  999  for INFL in `cat retweet_influencers.tsv` ; do grep $INFL downloaded_tweets_extend_nolf2_retweets.tsv | awk -F "\t" '{print $4}' | tr "," "\n"|sed "s/\"//g" > infl_retweets/$INFL.hashtags ;done
+ 1000  grep retweet downloaded_tweets_extend_nolf2.tsv > downloaded_tweets_extend_retweeted.tsv
+ 1001  ls
+ 1002  for i in `cat unique_post.tsv`; do  grep -E $i downloaded_tweets_extend_original_nolf2.tsv ; done | less
+ 1003  ls
+ 1004  wc downloaded_tweets_extend_retweeted.tsv
+ 1005  for i in `cat unique_post.tsv`; do  grep -E $i downloaded_tweets_extend_original_nolf2.tsv ; done >> downloaded_tweets_extend_retweeted.tsv
+ 1006  rm downloaded_tweets_extend_retweeted.tsv
+ 1007  grep retweet downloaded_tweets_extend_nolf2.tsv > downloaded_tweets_extend_retweeted.tsv
+ 1008  for i in `awk '{print $1}' unique_post.tsv`; do  grep -E $i downloaded_tweets_extend_original_nolf2.tsv ; done >> less
+ 1009  for i in `cat unique_post.tsv`; do  awk '{print $1}' downloaded_tweets_extend_original_nolf2|grep -E $i ; done | less
+ 1010  for i in `cat unique_post.tsv`; do  awk '{print $1}' downloaded_tweets_extend_original_nolf2|grep -E $i ; done
+ 1011  for i in `cat unique_post.tsv`; do  awk '{print $1}' downloaded_tweets_extend_original_nolf2.tsv |grep -E $i ; done
+ 1012  for i in `cat unique_post.tsv`; do  awk '{print $1}' downloaded_tweets_extend_original_nolf2.tsv |grep -E $i ; done | less
+ 1013  wc unique_post.tsv
+ 1014  for i in `cat unique_post.tsv`; do  grep -E $i downloaded_tweets_extend_original_nolf2.tsv ; done
+ 1015  head -n 10 unique_post.tsv 
+ 1016  ls
+ 1017  rm less
+ 1018  wc downloaded_tweets_extend_nolf2_retweets.tsv
+ 1019  downloaded_tweets_extend_retweeted.tsv
+ 1020  wc downloaded_tweets_extend_retweeted.tsv
+ 1021  head -n 2 downloaded_tweets_extend_retweeted.tsv
+ 1022  cd ../A4
+ 1023  ls
+ 1024  head -n 5 retweets2.txt
+ 1025  head -n 5 retweets3.txt
+ 1026  head -n 5 retweets2.txt
+ 1027  ls ../A5
+ 1028  ls
+ 1029  head -n 5 a4_output.csv
+ 1030  sort -n retweets2.txt | unic -c | sort -n -r | head -n 5
+ 1031  sort -n retweets2.txt | uniq -c | sort -n -r | head -n 5
+ 1032  sort -n retweets2.txt | uniq -u | sort -n -r | head -n 5
+ 1033  uniq -c retweets2.txt| sort -n | uniq -c | sort -n -r |  head -n 5
+ 1034  uniq -u retweets2.txt| sort -n | uniq -c | sort -n -r |  head -n 5
+ 1035  uniq -u retweets2.txt
+ 1036  uniq -u retweets2.txt| sort -n | uniq -c | sort -n -r |  head -n 5
+ 1037  uniq retweets2.txt| sort -n | uniq -c | sort -n -r |  head -n 5
+ 1038  uniq -c retweets2.txt| sort -n | uniq -c | sort -n -r |  head -n 5
+ 1039  sort -n retweets2.txt | uniq -c | sort -n -r | head -n 5
+ 1040  sort -n retweets2.txt | uniq -c | sort -n -r | sed 's/^.\{8\}//' | head -n 5
+ 1041  ls
+ 1042  sort -n retweets2.txt | uniq -c | sort -n -r | sed 's/^.\{8\}//' > unique_post.tsv
+ 1043  mv unique_post.tsv ../A5
+ 1044  cd ../A5
+ 1045  ls
+ 1046  sort -n unique_post.tsv | uniq -c | sort -n -r | head -n 10
+ 1047  for i in `cat unique_post.tsv`; do  grep -E $i downloaded_tweets_extend_original_nolf2.tsv ; done
+ 1048  awk '{print $1}' downloaded_tweets_extend_original_nolf2.tsv > post_id.tsv
+ 1049  head -n 3 post_id.tsv
+ 1050  rm post_id.tsv
+ 1051  for i in `cat unique_post.tsv`; do  awk '{if ($1 == $i) print $0;}'downloaded_tweets_extend_original_nolf2.tsv ; done | less
+ 1052  for i in `cat unique_post.tsv`; do  awk '{if ($1 == $i) print $0;}' downloaded_tweets_extend_original_nolf2.tsv ; done
+ 1053  for i in `cat unique_post.tsv`; do  awk '{if ($1 == $i) print $0;}' downloaded_tweets_extend_original_nolf2.tsv ; done 
+ 1054  for i in `cat unique_post.tsv`; do  awk '{if ($1 == $i) print $0;}' downloaded_tweets_extend_original_nolf2.tsv ; done | less
+ 1055  qa!
+ 1056  ;;;
+ 1057  for i in `cat unique_post.tsv`; do  grep -E $i downloaded_tweets_extend_original_nolf2.tsv ; done | ;ess
+ 1058  for i in `cat unique_post.tsv`; do  grep -E $i downloaded_tweets_extend_original_nolf2.tsv ; done | less
+ 1059  ls
+ 1060  head -n 5 downloaded_tweets_extend_original_nolf2.tsv
+ 1061  head -n 10 downloaded_tweets_extend_original_nolf2.tsv
+ 1062  for i in `cat unique_post.tsv`; do  grep -E $i downloaded_tweets_extend_original_nolf2.tsv ; done | less
+ 1063  cut -f1 downloaded_tweets_extend_original_nolf2.tsv
+ 1064  cut -f1 downloaded_tweets_extend_original_nolf2.tsv > post_id.tsv
+ 1065  head -n 1  downloaded_tweets_extend_original_nolf2.tsv
+ 1066  awk '{$5=""; print $0}' downloaded_tweets_extend_original_nolf2.tsv | head
+ 1067  awk '{$5=""; print $0}' downloaded_tweets_extend_original_nolf2.tsv > downloaded_tweets_extend_original_nolf2_REMOVED.tsv
+ 1068  for i in `cat unique_post.tsv`; do  grep -E $i downloaded_tweets_extend_original_nolf2_REMOVED.tsv \; done | less
+ 1069  for i in `cat unique_post.tsv`; do  grep -E $i downloaded_tweets_extend_original_nolf2_REMOVED.tsv ; done | less
+ 1070  for i in `cat unique_post.tsv`; do  grep -E $i downloaded_tweets_extend_original_nolf2_REMOVED.tsv ; done | wc
+ 1071  for i in `cat unique_post.tsv`; do  grep -E $i downloaded_tweets_extend_original_nolf2_REMOVED.tsv ; done | head -m 5
+ 1072  for i in `cat unique_post.tsv`; do  grep -E $i downloaded_tweets_extend_original_nolf2_REMOVED.tsv ; done | head -n 5
+ 1073  ls
+ 1074  awk '{$5=""; print $0}' downloaded_tweets_extend_retweeted.tsv > downloaded_tweets_extend_retweeted_REMOVED.tsv
+ 1075  wc downloaded_tweets_extend_retweeted_REMOVED.tsv
+ 1076  for i in `cat unique_post.tsv`; do  grep -E $i downloaded_tweets_extend_original_nolf2_REMOVED.tsv ; done >> downloaded_tweets_extend_retweeted_REMOVED.tsv
+ 1077  wc downloaded_tweets_extend_retweeted_REMOVED.tsv
+ 1078  ld
+ 1079  ls
+ 1080  for INFL in `cat retweet_influencers.tsv` ; do grep $INFL downloaded_tweets_extend_retweeted_REMOVED.tsv | awk -F "\t" '{print $4}' | tr "," "\n"|sed "s/\"//g" > infl_retweets/$INFL.hashtags ;done
+ 1081  ls
+ 1082  ls infl_retweets
+ 1083  cd ..
+ 1084  head -n 1 downloaded_tweets_extend_retweeted_REMOVED.tsv
+ 1085  cd A5
+ 1086  head -n 1 downloaded_tweets_extend_retweeted_REMOVED.tsv
+ 1087  ls 
+ 1088  head -n 1 downloaded_tweets_extend_original_nolf2.tsv
+ 1089  head -n 1downloaded_tweets_extend_retweeted_REMOVED.tsv
+ 1090  head -n 1 downloaded_tweets_extend_retweeted_REMOVED.tsv
+ 1091  awk '{$1=""; print $0}' downloaded_tweets_extend_retweeted.tsv | head -n 2
+ 1092  awk '{$5=""; print $0}' downloaded_tweets_extend_original_nolf2.tsv | head -n 2
+ 1093  awk '{$5=""; print $0}' downloaded_tweets_extend_original_nolf2.tsv | head -n 10
+ 1094  awk '{$5=""; print $0}' downloaded_tweets_extend_original_nolf2.tsv > downloaded_tweets_extend_original_nolf2_REMOVED.tsv
+ 1095  head -n 1 downloaded_tweets_extend_original_nolf2_REMOVED.tsv
+ 1096  head -n 1 downloaded_tweets_extend_retweeted.tsv
+ 1097  awk '{$5=""; print $0}' downloaded_tweets_extend_retweeted.tsv head -n 1
+ 1098* awk '{$5=""; print $0}' do
+ 1099  ls
+ 1100  grep retweeted downloaded_tweets_extend_original_nolf2.tsv | head -n 10
+ 1101  grep retweeted downloaded_tweets_extend_original_nolf2.tsv | wc
+ 1102  grep retweeted downloaded_tweets_extend_nolf2.tsv | wc
+ 1103  grep retweeted downloaded_tweets_extend_nolf2.tsv | head -n 1
+ 1104  awk '{$5=""; print $0}' downloaded_tweets_extend_nolf2.tsv > downloaded_tweets_extend_nolf2_REMOVED.tsv
+ 1105  rm downloaded_tweets_extend_nolf2_REMOVED.tsv
+ 1106  head -n 1 downloaded_tweets_extend_retweeted.tsv
+ 1107  head -n 1 downloaded_tweets_extend_nolf2.tsv
+ 1108  vi downloaded_tweets_extend_nolf2.tsv
+ 1109  ls
+ 1110  vi downloaded_tweets_extend_retweeted.tsv
+ 1111  head -n 1 downloaded_tweets_extend_retweeted.tsv
+ 1112  awk '{$5=""; print $0}' downloaded_tweets_extend_retweeted.tsv | head -n 10
+ 1113  ls
+ 1114  head -n 3 downloaded_tweets_extend_retweeted.tsv
+ 1115  awk -F '\t' '{$5=""; print $0}' downloaded_tweets_extend_retweeted.tsv | head -n 10
+ 1116  head -n 1 downloaded_tweets_extend_retweeted.tsv
+ 1117  vi downloaded_tweets_extend_retweeted.tsv
+ 1118  awk -F '\t' '{$5=""; print $0}' downloaded_tweets_extend_retweeted.tsv | head -n 10
+ 1119  ls
+ 1120  head -n 1 downloaded_tweets_extend_original_nolf2_REMOVED.tsv
+ 1121  head -n 1 downloaded_tweets_extend_retweeted_REMOVED.tsv.tsv
+ 1122  head -n 1 downloaded_tweets_extend_retweeted_REMOVED.tsv
+ 1123  awk -F '\t' '{$5=""; print $0}' downloaded_tweets_extend_retweeted.tsv > downloaded_tweets_extend_retweeted_REMOVED.tsv
+ 1124  head -n 1 downloaded_tweets_extend_retweeted_REMOVED.tsv
+ 1125  vi downloaded_tweets_extend_retweeted_REMOVED.tsv
+ 1126  cut -f 1,2,3,4,6,7,8 downloaded_tweets_extend_retweeted.tsv | head -n 1
+ 1127  cut -f 1,2,3,4,6,7,8 downloaded_tweets_extend_retweeted.tsv | head -n 2
+ 1128  cut -d$'\t' -f 1,2,3,4,6,7,8 downloaded_tweets_extend_retweeted.tsv | head -n 2
+ 1129  cut -d$'\t'-f 1,2,3,4,6,7,8 downloaded_tweets_extend_retweeted.tsv | head -n 2
+ 1130  cut -d$'\t' -f1,2,3,4,6,7,8 downloaded_tweets_extend_retweeted.tsv | head -n 2
+ 1131  cut -d$'\t' -f1,2,3,4,6,7,8 downloaded_tweets_extend_retweeted.tsv | cut -f 1
+ 1132  cut -d$'\t' -f1,2,3,4,6,7,8 downloaded_tweets_extend_retweeted.tsv |cut -f2| head -n 2
+ 1133  cut -d$'\t' -f1,2,3,4,6,7,8 downloaded_tweets_extend_retweeted.tsv |cut -f3| head -n 2
+ 1134  cut -d$'\t' -f1,2,3,4,6,7,8 downloaded_tweets_extend_retweeted.tsv |cut -f4| head -n 2
+ 1135  cut -d$'\t' -f1,2,3,4,6,7,8 downloaded_tweets_extend_retweeted.tsv |cut -f5| head -n 2
+ 1136  cut -d$'\t' -f1,2,3,4,6,7,8 downloaded_tweets_extend_retweeted.tsv |cut -f6| head -n 2
+ 1137  cut -d$'\t' -f1,2,3,4,6,7,8 downloaded_tweets_extend_retweeted.tsv |cut -f7| head -n 2
+ 1138  cut -d$'\t' -f1,2,3,4,6,7,8 downloaded_tweets_extend_retweeted.tsv| head -n 2
+ 1139  ls
+ 1140  cut -d$'\t' -f1,2,3,4,6,7,8 downloaded_tweets_extend_retweeted.tsv > downloaded_tweets_extend_retweeted_REMOVED.tsv
+ 1141  head -n 4 downloaded_tweets_extend_retweeted_REMOVED.tsv
+ 1142  wc downloaded_tweets_extend_retweeted_REMOVED.tsv
+ 1143  cp downloaded_tweets_extend_retweeted_REMOVED.tsv downloaded_tweets_extend_retweeted_combined
+ 1144  head -n 1 retweet_influencers.tsv
+ 1145  for i in `cat unique_post.tsv`; do  grep -E $i downloaded_tweets_extend_original_nolf2_REMOVED.tsv; done | less
+ 1146  ls
+ 1147  for i in `cat unique_post.tsv`; do  grep -E $i downloaded_tweets_extend_original_nolf2_REMOVED.tsv; done >> downloaded_tweets_extend_retweeted_combined
+ 1148  ls
+ 1149  rm downloaded_tweets_extend_retweeted_combined
+ 1150  for i in `cat unique_post.tsv`; do  grep -E $i downloaded_tweets_extend_original_nolf2_REMOVED.tsv; done >> downloaded_tweets_extend_retweeted_combined.tsv
+ 1151  wc downloaded_tweets_extend_retweeted_combined.tsv
+ 1152  for INFL in `cat retweet_influencers.tsv` ; do grep $INFL downloaded_tweets_extend_retweeted_combined.tsv| awk -F "\t" '{print $4}' | tr "," "\n"|sed "s/\"//g" > infl_retweets/$INFL.hashtags ;done
+ 1153  rm -f infl_retweets
+ 1154  rmdir -f infl_retweets
+ 1155  rmdir --help
+ 1156  rmdir infl_retweets
+ 1157  mkdir infl_retweet
+ 1158  for INFL in `cat retweet_influencers.tsv` ; do grep $INFL downloaded_tweets_extend_retweeted_combined.tsv| awk -F "\t" '{print $4}' | tr "," "\n"|sed "s/\"//g" > infl_retweet/$INFL.hashtags ;done
+ 1159  ls
+ 1160  ls infl_retweet
+ 1161  head -n ./12588712.hashtags
+ 1162  head -n 2 ./12588712.hashtags
+ 1163  ls
+ 1164  cd infl_retweet
+ 1165  head -n 2 12588712.hashtags
+ 1166  head -n 41257970011395756034.hashtags
+ 1167  head -n 4 1257970011395756034.hashtags
+ 1168  ls
+ 1169  head -n 2 retweet_influencers.tsv
+ 1170  cd ..
+ 1171  head -n 2 retweet_influencers.tsv
+ 1172  grep 1496645834951299072 downloaded_tweets_extend_retweeted_combined.tsv
+ 1173  head -n 2 downloaded_tweets_extend_retweeted_combined.tsv
+ 1174  ls
+ 1175  head -n 5 downloaded_tweets_extend_retweeted_combined.tsv
+ 1176  head -n 5 downloaded_tweets_extend_original_nolf2_REMOVED.tsv
+ 1177  ls
+ 1178  head -n 10 downloaded_tweets_extend_retweeted_REMOVED.tsv
+ 1179  sl
+ 1180  ls
+ 1181  grep retweeted downloaded_tweets_extend_retweeted_REMOVED.tsv
+ 1182  grep retweeted downloaded_tweets_extend_original_nolf2_REMOVED.tsv
+ 1183  ls
+ 1184  grep downloaded_tweets_extend_retweeted_REMOVED.tsv
+ 1185  grep reference downloaded_tweets_extend_retweeted_REMOVED.tsv
+ 1186  grep reference downloaded_tweets_extend_retweeted_combined.tsv
+ 1187  grep ReferencedTweet downloaded_tweets_extend_retweeted_combined.tsv
+ 1188  ls
+ 1189  grep ReferencedTweet downloaded_tweets_extend_retweeted_REMOVED.tsv
+ 1190  grep ReferencedTweet downloaded_tweets_extend_original_nolf2_REMOVED.tsv
+ 1191  ls
+ 1192  cut -d$'\t' -f1,2,3,4,6,7,8 downloaded_tweets_extend_original_nolf2.tsv > downloaded_tweets_extend_original_nolf2_REMOVED.tsv
+ 1193  grep ReferencedTweet downloaded_tweets_extend_original_nolf2_REMOVED.tsv
+ 1194  grep ReferencedTweet downloaded_tweets_extend_retweeted_REMOVED.tsv
+ 1195  rm downloaded_tweets_extend_retweeted_combined.tsv
+ 1196  cp downloaded_tweets_extend_retweeted_REMOVED.tsv downloaded_tweets_extend_retweeted_combined.tsv
+ 1197  for i in `cat unique_post.tsv`; do  grep -E $i downloaded_tweets_extend_original_nolf2_REMOVED.tsv; done >> downloaded_tweets_extend_retweeted_combined.tsv
+ 1198  wc downloaded_tweets_extend_retweeted_combined.tsv
+ 1199  grep 1496645834951299072 downloaded_tweets_extend_retweeted_combined.tsv
+ 1200  mkdir infl_retweeted
+ 1201  for INFL in `cat retweet_influencers.tsv` ; do grep $INFL downloaded_tweets_extend_retweeted_combined.tsv| awk -F "\t" '{print $4}' | tr "," "\n"|sed "s/\"//g" > infl_retweeted/$INFL.hashtags ;done
+ 1202  ls
+ 1203  cd infl_retweeted
+ 1204  ls
+ 1205  head -n 5 1259161086.hashtags
+ 1206  ls -ltr
+ 1207  for FILE in `ls|grep -v retweets_hashtag_freq.tsv` ; do for HASHTAG in `cat $FILE`; do count_H_in_C=`grep $HASHTAG $FILE | wc -l` ; count_hashtags_in_C=`cat $FILE | wc -l` ; count_H_entire_dataset=`grep $HASHTAG ../downloaded_tweets_extend_retweeted_combined.tsv| wc -l` ; count_hashtags_entire_dataset=148444;  frequency_H_in_C=`echo "$count_H_in_C / $count_hashtags_in_C" | bc -l`; frequency_H_overall=`echo "$count_H_entire_dataset / $count_hashtags_entire_dataset" | bc -l` ; relative_frequency_H_C=`echo "$frequency_H_in_C / $frequency_H_overall" | bc -l` ; echo "$HASHTAG $FILE   $relative_frequency_H_C $frequency_H_in_C $frequency_H_overall $count_H_in_C $count_hashtags_in_C $count_H_entire_dataset $count_hashtags_entire_dataset" ; done ; done > retweets_hashtag_freq.tsv
+ 1208  ls
+ 1209  head -n 10 retweets_hashtag_freq.tsv
+ 1210  vi retweets_hashtag_freq.tsv
+ 1211  cd ..
+ 1212  ls
+ 1213  vi a5.txt
+ 1214  ls
+ 1215  infl_retweeted
+ 1216  cd infl_retweeted
+ 1217  ls
+ 1218  cd ..
+ 1219  ls
+ 1220  cat retweet_influencers.tsv | head -n 5
+ 1221  ls
+ 1222  cd infl_retweeted
+ 1223  heda -n 1 retweets_hashtag_freq.tsv
+ 1224  head -n 1 retweets_hashtag_freq.tsv
+ 1225  cut -f 1 retweets_hashtags_freq.tsv
+ 1226* 
+ 1227  head -n 1 retweets_hashtag_freq.tsv
+ 1228  cp retweets_hashtag_freq_fixed.tsv
+ 1229  cp retweets_hashtag_freq.tsv retweets_hashtag_freq_fixed.tsv
+ 1230  sed 's/[:blank:]+/,/g' retweets_hashtag_freq.tsv > retweets_hashtag_freq_fixed.tsv
+ 1231  sed 's/ /\t/g' retweets_hashtag_freq.tsv > retweets_hashtag_freq_fixed.tsv
+ 1232  head -n 1 retweets_hashtag_freq_fixed.tsv
+ 1233  head -n 2 retweets_hashtag_freq_fixed.tsv
+ 1234  vi retweets_hashtag_freq_fixed.tsv
+ 1235  vi retweets_hashtag_freq.tsv
+ 1236  rm retweets_hashtag_freq_fixed.tsv
+ 1237  sed 's/  */\t/g' retweets_hashtag_freq.tsv > retweets_hashtag_freq_fixed.tsv
+ 1238  vi retweets_hashtag_freq_fixed.tsv
+ 1239  cut -f1 retweets_hashtag_freq_fixed.tsv | head -n 5
+ 1240  cut -f2 retweets_hashtag_freq_fixed.tsv | head -n 5
+ 1241  cut -f1 retweets_hashtag_freq_fixed.tsv | sort | uniq -c | sort -n -r 
+ 1242  cut -f1 retweets_hashtag_freq_fixed.tsv | sort | uniq -c | sort -n -r | head -n 10
+ 1243  cut -f2 retweets_hashtag_freq_fixed.tsv | sort | uniq -c | sort -n -r | head -n 10
+ 1244  grep 45379403.hashtags retweets_hashtag_freq_fixed.tsv | head -n 10
+ 1245  grep 45379403.hashtags retweets_hashtag_freq_fixed.tsv | cut -f1 | sort | uniq -c | sort -n -r | head -n 10
+ 1246  grep 24238030.hashtags retweets_hashtag_freq_fixed.tsv | cut -f1 | sort | uniq -c | sort -n -r | head -n 10
+ 1247  grep 1060440219097423872.hashtags retweets_hashtag_freq_fixed.tsv | cut -f1 | sort | uniq -c | sort -n -r | head -n 10
+ 1248  head -n 1 retweets_hashtag_freq_fixed.tsv
+ 1249  cut -f2 retweets_hashtag_freq_fixed.tsv | sort | uniq -c | sort -n -r | head -n 10
+ 1250  sort -k 7 retweets_hashtag_freq_fixed.tsv | head -n 10
+ 1251  sort -k 8 retweets_hashtag_freq_fixed.tsv | head -n 10
+ 1252  sort -n -k8 retweets_hashtag_freq_fixed.tsv | head -n 10
+ 1253  sort -n -k8 -r retweets_hashtag_freq_fixed.tsv | head -n 10
+ 1254  sort -n -k8 -r retweets_hashtag_freq_fixed.tsv | head -n 20
+ 1255  sort -n -k8 -r retweets_hashtag_freq_fixed.tsv | head -n 30
+ 1256  sort -k2 -r retweets_hashtag_freq_fixed.tsv | head -n 10
+ 1257  sort -k1 -r retweets_hashtag_freq_fixed.tsv | head -n 10
+ 1258  sort -k1  retweets_hashtag_freq_fixed.tsv | head -n 10
+ 1259  vi retweets_hashtag_freq_fixed.tsv
+ 1260  sort -n -k8 -r retweets_hashtag_freq_fixed.tsv | head -n 30
+ 1261  sort -n -k3 -r retweets_hashtag_freq_fixed.tsv | head -n 30
+ 1262  sort -n -k3 retweets_hashtag_freq_fixed.tsv | head -n 30
+ 1263  sort -n -k3 -r retweets_hashtag_freq_fixed.tsv | head -n 30
+ 1264  grep 45379403.hashtags retweets_hashtag_freq_fixed.tsv | cut -f1 | sort | uniq -c | sort -n -r | head -n 10
+ 1265  grep 45379403.hashtags retweets_hashtag_freq_fixed.tsv | head -n 10
+ 1266  grep 45379403.hashtags retweets_hashtag_freq_fixed.tsv | sort -n -k3 -r | head -n 10
+ 1267  grep 45379403.hashtags retweets_hashtag_freq_fixed.tsv | grep UnityOfRussianAndUkrainianworkers       45379403.hashtags       50.49115646258507173655 .00034013605442176870   .00000673654711541052   1       2940    1       148444
+ 1268  grep 45379403.hashtags retweets_hashtag_freq_fixed.tsv | grep UnityOfRussianAndUkrainianworkers
+ 1269  head -n 10 45379403.hashtags
+ 1270  sort 45379403.hashtags | uniq -c | sort -n -r 
+ 1271  sort 45379403.hashtags | uniq -c | sort -n -r |head -n 10
+ 1272  grep 45379403.hashtags retweets_hashtag_freq_fixed.tsv | sort -n -k3 -r | head -n 10
+ 1273  grep 45379403.hashtags retweets_hashtag_freq_fixed.tsv | sort -n -k4 -r | head -n 10
+ 1274  grep 45379403.hashtags retweets_hashtag_freq_fixed.tsv | head -n 10
+ 1275  grep 45379403.hashtags retweets_hashtag_freq_fixed.tsv | grep Ukraine | head -n 10
+ 1276  grep 45379403.hashtags retweets_hashtag_freq_fixed.tsv | sort -n -k3 -r | head -n 10
+ 1277  grep 45379403.hashtags retweets_hashtag_freq_fixed.tsv | sort -n -k4 -r | head -n 10
+ 1278  grep 45379403.hashtags retweets_hashtag_freq_fixed.tsv | sort -n -k4 -r | head -n 20
+ 1279  grep 45379403.hashtags retweets_hashtag_freq_fixed.tsv | sort -n -k4 -r | head -n 50
+ 1280* grep 45379403.hashtags retweets_hashtag_freq_fixed.tsv | sort -n
+ 1281  sort 45379403.hashtags | cut -f1 | sort | uniq -c | sort -n -r | head -n 10
+ 1282  grep 45379403.hashtags retweets_hashtag_freq_fixed.tsv| grep Russia | head -n 1
+ 1283  head -n 10 retweets_hashtag_freq_fixed.tsv
+ 1284  sort -n -r -k5 retweets_hashtag_freq_fixed.tsv | head -n 10
+ 1285  sort -n -r -k5 retweets_hashtag_freq_fixed.tsv | head -n 20
+ 1286  sort -n -r -k5 retweets_hashtag_freq_fixed.tsv | head -n 200 | uniq -c 
+ 1287  sort -n -r -k5 retweets_hashtag_freq_fixed.tsv | head -n 200 | uniq -n -c 
+ 1288  sort -n -r -k3 retweets_hashtag_freq_fixed.tsv | head -n 200 | uniq -c 
+ 1289  head -n 1 retweets_hashtag_freq_fixed.tsv
+ 1290  cut -f4 retweets_hashtag_freq_fixed.tsv | head -n 1
+ 1291  cut -f3 retweets_hashtag_freq_fixed.tsv | head -n 1
+ 1292  cut -f2 retweets_hashtag_freq_fixed.tsv | head -n 1
+ 1293  awk '$8 > 1000 {print $0}' retweets_hashtag_freq_fixed.tsv | head -n 10
+ 1294  awk '$8 > 1000 {print $0}' retweets_hashtag_freq_fixed.tsv | sort -n -r -k3 | head -n 10
+ 1295  awk '$8 > 1000 {print $0}' retweets_hashtag_freq_fixed.tsv | sort -n -r -k3 | head -n 10 | 
+ 1296  awk '$8 > 1000 {print $0}' retweets_hashtag_freq_fixed.tsv | sort -n -r -k3 | head -n 10 
+ 1297  awk '$8 > 1000 {print $0}' retweets_hashtag_freq_fixed.tsv | sort -n -r -k8 | head -n 10 
+ 1298  awk '$8 > 1000 {print $0}' retweets_hashtag_freq_fixed.tsv | sort -n -r -k3 | head -n 10 
+ 1299  cd ..
+ 1300  ls
+ 1301  cd infl_replies
+ 1302  ls
+ 1303  head -n 10 replies_hashtag_freq.tsv
+ 1304  awk '$8 > 1000 {print $0}' replies_hashtag_freq.tsv | sort -n -r -k3 | head -n 10
+ 1305  head -n 10 replies_hashtag_freq.tsv
+ 1306  sort -n -r -k $8 replies_hashtag_freq.tsv
+ 1307  sort -n -r -k8 replies_hashtag_freq.tsv | head -n 10
+ 1308  awk '$8 > 50 {print $0}' replies_hashtag_freq.tsv | sort -n -r -k3 | head -n 10
+ 1309  awk '$8 > 50 {print $0}' replies_hashtag_freq.tsv | sort -n -r -k8 | head -n 10
+ 1310  awk '$8 > 50 {print $0}' replies_hashtag_freq.tsv | sort -n -r -k8 | head -n 20
+ 1311  awk '$8 > 50 {print $0}' replies_hashtag_freq.tsv | sort -n -r -k3 | head -n 20
+ 1312  cd ..
+ 1313  ls
+ 1314  mv A5 ../../
+ 1315  cd ..
+ 1316  mv A5 ../
+ 1317  ls
+ 1318  mkdir A5
+ 1319  cd ..
+ 1320  ls
+ 1321  cd A5
+ 1322  ls
+ 1323  ls -lts
+ 1324  ls -ltr
+ 1325  vi a5.txt
+ 1326  ls
+ 1327  mv a5.txt ../CS131/A5
+ 1328  ls
+ 1329  cd ../
+ 1330  ls
+ 1331  cd CS131
+ 1332  ls
+ 1333  cd A5
+ 1334  ls
+ 1335  history > cmds.log
