@@ -1,0 +1,121 @@
+
+
+
+
+1. 466
+2.2479
+3.339
+4.replied_infl.txt
+ 40 2022-02-17
+     38 2022-02-24
+     36 2022-02-26
+     36 2022-02-23
+     34 2022-02-12
+     33 2022-01-13
+     32 2022-02-16
+     30 2022-04-29
+     30 2022-03-25
+     30 2022-02-14
+
+5.replied_text_clean.txt
+
+
+
+awk -F '\t' '{print $6}' nobots.tsv| sort | uniq -c | sort -nr | awk '{if($1>2){print $2}}' | sort > infl.txt
+wc -l infl.txt
+awk -F '\t' 'NR==FNR{a[$0];next} $6 in a{print $0}' infl.txt nobots.tsv > replied_infl.txt
+
+
+
+awk -F '\t' '{print $2}' replied_infl.txt| sort | uniq > id_replied_infl.txt
+
+awk -F '\t' 'NR==FNR{a[$0];next} $6 in a{print $0}' id_replied_infl.txt nobots.tsv > replied_infl_reply.txt
+
+wc -l replied_infl_reply.txt
+awk '{print $3}' replied_infl.txt | sort | uniq -c | sort -nr -k 1 | head
+awk -F '\t' '{print $8}' replied_infl.txt  > replied_text.txt
+cat replied_text.txt | tr -d '[:punct:]' | sed 's/ \+/ /g' | sed 's/\t/ /g' | sed 's/ /\n/g' | tr A-Z a-z > replied_text_clean.txt
+
+Script started on 2022-12-07 06:18:09-05:00
+]0;bryant@sjsu:/mnt/scratch/bryant/CS131/A6[bryant@sjsu A6]$ ls[K[Kcd ../../[K
+]0;bryant@sjsu:/mnt/scratch/bryant[bryant@sjsu bryant]$ ls
+[0m[38;5;33mA5[0m     downloaded_tweets_extend_nolf2.tsv           unverified.txt  ws9.txt
+[38;5;33mCS131[0m  downloaded_tweets_extend_original_nolf2.tsv  verified.txt
+]0;bryant@sjsu:/mnt/scratch/bryant[bryant@sjsu bryant]$ grep replied downloaded_tweets_extend_nolf2.tsv | awk -F '\t' '{if ($2!=$6){print $0}}' > REPLIIES_NOBOTS.tsv[1P.tsv[1P.tsv[1P.tsv[1P.tsv[1P.tsv[1P.tsv[1P.tsv[1P.tsv[C[C[1P.tsv[C[1P.tsv[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C.t[1Psv[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C.ts[1Pv[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C.tsv[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C.tsv [K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Ptsv
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Psv[1Pv[Kdownlloaded_tweets_extend_nolf2_REPLIES.NOBOTS.tsv
+]0;bryant@sjsu:/mnt/scratch/bryant[bryant@sjsu bryant]$ grep replied downloaded_tweets_extend_original_nolf2.tsv | awk -F '\t' '{if ($2!=$6){print $0}}}' >> REPLIES_NOBOTS.tsv[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kdownloaded_tweets_extend_original_nolf2_REPLIES.NOBOTS.tsv[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K^C
+]0;bryant@sjsu:/mnt/scratch/bryant[bryant@sjsu bryant]$ ls
+[0m[38;5;33mA5[0m     downloaded_tweets_extend_nolf2_REPLIES.NOBOTS.tsv  downloaded_tweets_extend_original_nolf2.tsv  verified.txt
+[38;5;33mCS131[0m  downloaded_tweets_extend_nolf2.tsv                 unverified.txt                               ws9.txt
+]0;bryant@sjsu:/mnt/scratch/bryant[bryant@sjsu bryant]$ ^C
+]0;bryant@sjsu:/mnt/scratch/bryant[bryant@sjsu bryant]$ downloaded_tweets_extend_original_nolf2_REPLIES.NOBOTS.tsv^C
+]0;bryant@sjsu:/mnt/scratch/bryant[bryant@sjsu bryant]$ grep replied downloaded_tweets_extend_original_nolf2.tsv | awk -F '\t' '{if ($2!=$6){print $0}}}' >> REPLIES_NOBOTS.tsv[K[K^C
+]0;bryant@sjsu:/mnt/scratch/bryant[bryant@sjsu bryant]$ ^C
+]0;bryant@sjsu:/mnt/scratch/bryant[bryant@sjsu bryant]$ rm downloaded_tweets_extend_nolf2_REPLIES.NOBOTS.tsv
+]0;bryant@sjsu:/mnt/scratch/bryant[bryant@sjsu bryant]$ grep replied downloaded_tweets_extend_nolf2.tsv | awk -F '\t' '{if ($2!=$6){print $0}}' > REPLIIES_NOBOTS.tsv[K[K[K[K[K[K[K[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K np[Kop[Kbo ts.tsv
+]0;bryant@sjsu:/mnt/scratch/bryant[bryant@sjsu bryant]$ grep replied downloaded_tweets_extend_original_nolf2.tsv | awk -F '\t' '{if ($2!=$6){print $0}}}' >> REPLIES_NOBOTS.tsv[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Knobot.tsv
+]0;bryant@sjsu:/mnt/scratch/bryant[bryant@sjsu bryant]$ awk -F '\t' '{print $6}' REPLIES_NOBOTS.tsv | sort | uniq -c | sort -nr | awk '{if($1>2){print  $2}}' | sort > influencers.txt^C
+]0;bryant@sjsu:/mnt/scratch/bryant[bryant@sjsu bryant]$ awk -F '\t' '{print $6}' nobot.tsv| sort | uniq -c | sort -nr | awk '{if($1>2){print $2}}' | soort > infl.txt
+]0;bryant@sjsu:/mnt/scratch/bryant[bryant@sjsu bryant]$ wc -l infl.txt
+113 infl.txt
+]0;bryant@sjsu:/mnt/scratch/bryant[bryant@sjsu bryant]$ wc -l infl.txtawk -F '\t' '{print $6}' nobot.tsv| sort | uniq -c | sort -nr | awk '{if($1>2){print $2}}' | soort > infl.txt[A[C[C[C[C[C[C[C[Cgrep replied downloaded_tweets_extend_original_nolf2.tsv | awk -F '\t' '{if ($2!=$6){print $0}}' >> nobot.tsv[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cnolf2.tsv | awk -F '\t' '{if ($2!=$6){print $0}}' > nobot[9Ps.tsv[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Coriginal_nolf2.tsv | awk -F '\t' '{if ($2!=$6){print $0}}' >> nobot.tsv[A[C[C[C[C[C[C[Cawk -F '\t' '{print $6}' nobot.tsv| sort | uniq -c | sort -nr | awk '{if($1>2){print $2}}' | so[1Prt > infl.txt[A[C[C[C[C[C[C[C[Cwc -l infl.txt[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Krm nobot.tsv
+]0;bryant@sjsu:/mnt/scratch/bryant[bryant@sjsu bryant]$ ls
+[0m[38;5;33mA5[0m     downloaded_tweets_extend_nolf2.tsv           infl.txt    unverified.txt  ws9.txt
+[38;5;33mCS131[0m  downloaded_tweets_extend_original_nolf2.tsv  nobots.tsv  verified.txt
+]0;bryant@sjsu:/mnt/scratch/bryant[bryant@sjsu bryant]$ lsrm nobot.tsvs.tsv
+]0;bryant@sjsu:/mnt/scratch/bryant[bryant@sjsu bryant]$ rm infl.tsc[K[Kxt
+]0;bryant@sjsu:/mnt/scratch/bryant[bryant@sjsu bryant]$ l[Kls
+[0m[38;5;33mA5[0m     downloaded_tweets_extend_nolf2.tsv           unverified.txt  ws9.txt
+[38;5;33mCS131[0m  downloaded_tweets_extend_original_nolf2.tsv  verified.txt
+]0;bryant@sjsu:/mnt/scratch/bryant[bryant@sjsu bryant]$ grep replied downloaded_tweets_extend_nolf2.tsv | awk -F '\t' '{if ($2!=$6){print $0}}' > REPLIIES_NOBOTS.tsv[K[K[K[K[K[K[K[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[Knobo ts.tsv
+]0;bryant@sjsu:/mnt/scratch/bryant[bryant@sjsu bryant]$ grep replied downloaded_tweets_extend_original_nolf2.tsv | awk -F '\t' '{if ($2!=$6){print $0}}}' >> REPLIES_NOBOTS.tsv[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Knobots.tsv
+]0;bryant@sjsu:/mnt/scratch/bryant[bryant@sjsu bryant]$ awk -F '\t' '{print $6}' nobots.tsv| sort | uniq -c | sort -nr | awk '{if($1>2){print $2}}' | ssort > infl.txt
+]0;bryant@sjsu:/mnt/scratch/bryant[bryant@sjsu bryant]$ wc -l infl.txt
+466 infl.txt
+]0;bryant@sjsu:/mnt/scratch/bryant[bryant@sjsu bryant]$ awk -F '\t' 'NR==FNR{a[$0];next} $6 in a{print $0}' influencers.txt REPLIES_NOBOTS.tsv > replieed_to_infl.txt[K[K[K[K[K[K[K[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kawk -F '\t' 'NR==FNR{a[$0];next} $6 in a{print $0}' infl.txt nobots.tsv > replied_infl.txt
+]0;bryant@sjsu:/mnt/scratch/bryant[bryant@sjsu bryant]$ wc -l replied_to_infl.txt
+wc: replied_to_infl.txt: No such file or directory
+]0;bryant@sjsu:/mnt/scratch/bryant[bryant@sjsu bryant]$ wc -l replied_to_infl.txt[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kreplied_infl.txt
+2479 replied_infl.txt
+]0;bryant@sjsu:/mnt/scratch/bryant[bryant@sjsu bryant]$ awk -F '\t' '{print $2}' replied_infl.txt| sort | uniq > id_replied_infl.txt
+]0;bryant@sjsu:/mnt/scratch/bryant[bryant@sjsu bryant]$ awk -F '\t' 'NR==FNR{a[$0];next} $6 in a{print $0}' id_replied_infl.txt nobots.tsv > replied_innfl_reply.txt
+]0;bryant@sjsu:/mnt/scratch/bryant[bryant@sjsu bryant]$ wc -l replied_infl_reply.txt
+339 replied_infl_reply.txt
+]0;bryant@sjsu:/mnt/scratch/bryant[bryant@sjsu bryant]$ awk '{print $3}' replied_infl.txt | sort | uniq -c | sort -nr -k 1 | head
+     40 2022-02-17
+     38 2022-02-24
+     36 2022-02-26
+     36 2022-02-23
+     34 2022-02-12
+     33 2022-01-13
+     32 2022-02-16
+     30 2022-04-29
+     30 2022-03-25
+     30 2022-02-14
+]0;bryant@sjsu:/mnt/scratch/bryant[bryant@sjsu bryant]$ awk -F '\t' '{print $8}' replied_infl.txt  > replied_text.txt
+]0;bryant@sjsu:/mnt/scratch/bryant[bryant@sjsu bryant]$ cat replied_text.txt | tr -d '[:punct:]' | sed 's/ \+/ /g' | sed 's/\t/ /g' | sed 's/ /\n/g' |  tr A-Z a-z > replied_text_clean.txt
+]0;bryant@sjsu:/mnt/scratch/bryant[bryant@sjsu bryant]$ fgrep -v -w -f /usr/share/groff/current/eign filtered_text.txt | sort | uniq -c | sort -nr | heead -n 14[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C | sort | uniq -c | sort -nr | hea[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C | sort | uniq -c | sort -nr | head[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C | sort | uniq -c | sort -nr | head [1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C | sort | uniq -c | sort -nr | head -[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C | sort | uniq -c | sort -nr | head -n[1P 14[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C | sort | uniq -c | sort -nr | head -n [1P14[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C | sort | uniq -c | sort -nr | head -n 1[1P4[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C | sort | uniq -c | sort -nr | head -n 14[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C | sort | uniq -c | sort -nr | head -n 14 [K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1P[1P[1P[1P[1P[1Preplied_text_clean.txt | sort | uniq -c | sort -nrr | head -n 14[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+    456 amp
+    455 
+    155 ford
+    149 has
+    120 covid19
+    103 putinhitler
+    101 ontario
+    101 need
+     93 doug
+     90 its
+     90 covid
+     89 canada
+     81 standwithukraine
+     74 ukraine
+]0;bryant@sjsu:/mnt/scratch/bryant[bryant@sjsu bryant]$ exit
+
+Script done on 2022-12-07 06:28:52-05:00
